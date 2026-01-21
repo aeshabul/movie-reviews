@@ -2,91 +2,87 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Latest Movie Reviews | Honest Reviews</title>
-  <meta name="description" content="Latest Hollywood movie reviews, ratings and verdicts. Honest movie reviews.">
+  <title>Movie Reviews | Ratings & Critics</title>
+  <meta name="description" content="Latest movie reviews, ratings and critics verdicts. A premium movie review platform.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-
-  <!-- Search input basic styling -->
-  <style>
-    .search-box {
-      margin: 20px 0;
-    }
-    .search-box input {
-      width: 100%;
-      padding: 12px 14px;
-      border-radius: 6px;
-      border: none;
-      outline: none;
-      font-size: 15px;
-    }
-  </style>
 </head>
 
 <body>
 
-<header class="navbar">
+<header class="navbar brand-navbar">
   <div class="logo">Movie Reviews</div>
   <nav>
-    <a href="index.html">Home</a>
-    <a href="#">Movies</a>
+    <a href="index.html">Movies</a>
+    <a href="#">TV</a>
     <a href="#">Reviews</a>
-    <a href="#">OTT</a>
+    <a href="#">Top Rated</a>
   </nav>
 </header>
 
-<main class="page">
+<main class="page editorial-home">
 
-  <h1>Latest Movie Reviews</h1>
+  <h1 class="section-title">Latest Reviews</h1>
 
-  <!-- SEARCH BOX -->
-  <div class="search-box">
-    <input
-      type="text"
-      id="searchInput"
-      placeholder="Search movies..."
-      onkeyup="searchMovies()">
-  </div>
+  <!-- REVIEW ITEM -->
+  <a href="wonder-woman.html" class="review-row">
+    <img src="images/wonder-woman.webp" alt="Wonder Woman Poster">
 
-  <!-- MOVIE GRID -->
-  <div class="card-grid" id="movieGrid">
+    <div class="review-content">
+      <h2>Wonder Woman (2017)</h2>
 
-    <a href="wonder-woman.html" class="movie-card" data-title="wonder woman">
-      <img src="images/wonder-woman.webp" alt="Wonder Woman Poster">
-    </a>
+      <div class="score-badge score-good">84%</div>
 
-    <a href="the-batman.html" class="movie-card" data-title="the batman">
-      <img src="images/the-batman.webp" alt="The Batman Poster">
-    </a>
+      <p class="summary">
+        A powerful and emotionally grounded superhero origin story
+        that stands among DC’s strongest films.
+      </p>
 
-    <a href="avatar-2.html" class="movie-card" data-title="avatar the way of water">
-      <img src="images/avatar-2.webp" alt="Avatar The Way of Water Poster">
-    </a>
+      <span class="read-more">Read full review →</span>
+    </div>
+  </a>
 
-  </div>
+  <!-- REVIEW ITEM -->
+  <a href="the-batman.html" class="review-row">
+    <img src="images/the-batman.webp" alt="The Batman Poster">
+
+    <div class="review-content">
+      <h2>The Batman (2022)</h2>
+
+      <div class="score-badge score-good">85%</div>
+
+      <p class="summary">
+        Dark, gritty and detective-driven take on Batman
+        with strong atmosphere and performances.
+      </p>
+
+      <span class="read-more">Read full review →</span>
+    </div>
+  </a>
+
+  <!-- REVIEW ITEM -->
+  <a href="avatar-2.html" class="review-row">
+    <img src="images/avatar-2.webp" alt="Avatar The Way of Water Poster">
+
+    <div class="review-content">
+      <h2>Avatar: The Way of Water (2022)</h2>
+
+      <div class="score-badge score-average">76%</div>
+
+      <p class="summary">
+        A visually stunning sequel that expands Pandora,
+        even if the narrative feels familiar.
+      </p>
+
+      <span class="read-more">Read full review →</span>
+    </div>
+  </a>
 
 </main>
 
 <footer class="footer">
-  © 2026 Movie Reviews · Honest Reviews
+  © 2026 Movie Reviews · Independent Critics
 </footer>
-
-<!-- SEARCH SCRIPT -->
-<script>
-function searchMovies() {
-  const input = document.getElementById("searchInput").value.toLowerCase();
-  const cards = document.querySelectorAll(".movie-card");
-
-  cards.forEach(card => {
-    const title = card.getAttribute("data-title");
-    if (title.includes(input)) {
-      card.style.display = "block";
-    } else {
-      card.style.display = "none";
-    }
-  });
-}
-</script>
 
 </body>
 </html>
