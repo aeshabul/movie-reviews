@@ -147,6 +147,25 @@
   "reviewBody": "Avatar: The Way of Water is a visually spectacular sequel with breathtaking underwater cinematography and immersive world-building."
 }
 </script>
+<script>
+function openTrailer() {
+  const modal = document.getElementById("trailerModal");
+  const frame = document.getElementById("trailerFrame");
+
+  // 🔁 YAHAN APNA TRAILER URL DAALO
+  frame.src = "https://www.youtube.com/embed/nb_fFj_0rq8?si=X7kSWbgCqN016oj9";
+
+  modal.classList.add("active");
+}
+
+function closeTrailer() {
+  const modal = document.getElementById("trailerModal");
+  const frame = document.getElementById("trailerFrame");
+
+  modal.classList.remove("active");
+  frame.src = "";
+}
+</script>
 
 </body>
 </html>
