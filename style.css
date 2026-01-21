@@ -48,16 +48,12 @@ body {
 }
 
 .movie-card {
-  background: #1c1c1c;
-  border-radius: 8px;
-  overflow: hidden;
-  text-decoration: none;
-  color: #fff;
-  transition: transform 0.2s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .movie-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.6);
 }
 
 .movie-card img {
