@@ -1,104 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Movie Reviews – Honest Movie Reviews</title>
 
-  <title>Movie Reviews, Ratings & Verdicts | MovieReviews</title>
-  <meta name="description" content="Discover latest movie reviews, ratings, critic verdicts and detailed analysis. A premium movie discovery and review platform.">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- SEO -->
+  <meta name="description" content="Latest Hollywood & OTT movie reviews with ratings, trailers and honest opinions.">
+  <meta name="theme-color" content="#ffffff">
 
-  <!-- CANONICAL -->
-  <link rel="canonical" href="https://movie-reviews-six-rosy.vercel.app/">
-
-  <!-- OPEN GRAPH -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Movie Reviews & Ratings | MovieReviews">
-  <meta property="og:description" content="Discover latest movie reviews, ratings and critic verdicts.">
-  <meta property="og:image" content="https://movie-reviews-six-rosy.vercel.app/images/avatar-2.webp">
-  <meta property="og:url" content="https://movie-reviews-six-rosy.vercel.app/">
-  <meta property="og:site_name" content="MovieReviews">
-
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
-</head>
 
+</head>
 <body>
 
-<header class="navbar">
-  <div class="logo">MovieReviews</div>
-  <nav>
-    <a href="#">Movies</a>
-    <a href="#">OTT</a>
-    <a href="#">Reviews</a>
-    <a href="#">Genres</a>
-  </nav>
-</header>
-
-<main class="container">
-
-  <h1 class="page-title">Discover Movies</h1>
-
-  <section class="movie-row">
-
-    <!-- AVATAR -->
-    <a href="avatar-2.html" class="movie-card">
-      <img src="images/avatar-2.webp" alt="Avatar The Way of Water Movie Poster">
-      <div class="card-info">
-        <h3>Avatar: The Way of Water</h3>
-        <span class="rating">⭐ 4.1</span>
+  <!-- ===== HEADER ===== -->
+  <header class="header">
+    <div class="container header-inner">
+      <div class="logo">
+        <img src="images/logo-light.png" alt="Movie Reviews" class="logo-light">
+        <img src="images/logo-dark.png" alt="Movie Reviews" class="logo-dark">
       </div>
-    </a>
 
-    <!-- BATMAN -->
-    <a href="the-batman.html" class="movie-card">
-      <img src="images/the-batman.webp" alt="The Batman Movie Poster">
-      <div class="card-info">
-        <h3>The Batman</h3>
-        <span class="rating">⭐ 4.3</span>
+      <nav class="nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="#">Hollywood</a>
+        <a href="#">OTT</a>
+      </nav>
+
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+        🌙
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <span class="badge">Featured Review</span>
+        <h1>Avatar: The Way of Water</h1>
+        <p>
+          James Cameron returns with a visually stunning sequel that expands
+          Pandora’s world with breathtaking visuals and emotional depth.
+        </p>
+        <a href="avatar-2.html" class="btn-primary">Read Full Review</a>
       </div>
-    </a>
-
-    <!-- WONDER WOMAN -->
-    <a href="wonder-woman.html" class="movie-card">
-      <img src="images/wonder-woman.webp" alt="Wonder Woman Movie Poster">
-      <div class="card-info">
-        <h3>Wonder Woman</h3>
-        <span class="rating">⭐ 4.5</span>
+      <div class="hero-poster">
+        <img src="images/avatar-2.jpg" alt="Avatar 2">
       </div>
-    </a>
-
+    </div>
   </section>
 
-</main>
+  <!-- ===== MOVIE GRID ===== -->
+  <section class="movies">
+    <div class="container">
+      <h2 class="section-title">Latest Reviews</h2>
 
-<footer class="footer">
-  © 2026 MovieReviews · Independent Movie Discovery Platform
-</footer>
+      <div class="movie-grid">
 
-<!-- STRUCTURED DATA : MOVIE LIST -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ItemList",
-  "name": "Latest Movie Reviews",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "url": "https://movie-reviews-six-rosy.vercel.app/avatar-2.html"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "url": "https://movie-reviews-six-rosy.vercel.app/the-batman.html"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "url": "https://movie-reviews-six-rosy.vercel.app/wonder-woman.html"
-    }
-  ]
-}
-</script>
+        <!-- CARD 1 -->
+        <a href="the-batman.html" class="movie-card">
+          <img src="images/the-batman.jpg" alt="The Batman">
+          <div class="movie-info">
+            <h3>The Batman</h3>
+            <span class="rating">⭐⭐⭐⭐☆</span>
+          </div>
+        </a>
 
+        <!-- CARD 2 -->
+        <a href="wonder-woman.html" class="movie-card">
+          <img src="images/wonder-woman.jpg" alt="Wonder Woman">
+          <div class="movie-info">
+            <h3>Wonder Woman</h3>
+            <span class="rating">⭐⭐⭐⭐☆</span>
+          </div>
+        </a>
+
+        <!-- CARD 3 -->
+        <a href="avatar-2.html" class="movie-card">
+          <img src="images/avatar-2.jpg" alt="Avatar 2">
+          <div class="movie-info">
+            <h3>Avatar 2</h3>
+            <span class="rating">⭐⭐⭐⭐⭐</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© 2026 Movie Reviews. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="theme.js"></script>
 </body>
 </html>
