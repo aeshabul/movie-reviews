@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Movie Review | Movie Reviews</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Full movie review with rating, story, verdict and trailer. Honest movie reviews.">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="header">
+  <div class="container header-inner">
+    <div class="logo">
+      <img src="images/logo-light.webp" alt="Movie Reviews" class="logo-light">
+      <img src="images/logo-dark.webp" alt="Movie Reviews" class="logo-dark">
+    </div>
+
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="#">Hollywood</a>
+      <a href="#">OTT</a>
+    </nav>
+
+    <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+      🌙
+    </button>
+  </div>
+</header>
+
+<!-- ===== MOVIE HERO ===== -->
+<section class="hero">
+  <div class="container hero-inner">
+
+    <!-- TEXT -->
+    <div class="hero-text">
+      <span class="badge">Movie Review</span>
+
+      <h1>MOVIE TITLE HERE</h1>
+
+      <p>
+        Short intro / one-line summary of the movie. Replace this text for each
+        movie page.
+      </p>
+
+      <div class="movie-meta">
+        <span>⭐ Rating: <strong>4 / 5</strong></span><br>
+        <span>🎬 Release: 2024</span><br>
+        <span>⏱ Runtime: 150 min</span>
+      </div>
+
+      <button class="btn-primary" id="openTrailer">
+        ▶ Watch Trailer
+      </button>
+    </div>
+
+    <!-- POSTER -->
+    <div class="hero-poster">
+      <img src="images/movie-poster.webp" alt="Movie Poster">
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== REVIEW CONTENT ===== -->
+<section class="movies">
+  <div class="container">
+
+    <h2 class="section-title">Story & Review</h2>
+
+    <article class="review-content">
+      <p>
+        Write full movie story summary here. Keep it spoiler-free if possible.
+        This section is good for SEO and user engagement.
+      </p>
+
+      <p>
+        Talk about performances, direction, music, visuals and overall impact
+        of the movie.
+      </p>
+
+      <p>
+        Mention positives and negatives honestly. This helps build trust with
+        readers and AdSense approval.
+      </p>
+    </article>
+
+    <h2 class="section-title">Final Verdict</h2>
+
+    <article class="review-content">
+      <p>
+        Final opinion in short. Who should watch this movie and who can skip it.
+      </p>
+    </article>
+
+  </div>
+</section>
+
+<!-- ===== TRAILER MODAL ===== -->
+<div class="trailer-modal" id="trailerModal">
+  <div class="trailer-box">
+    <button class="close-btn" id="closeTrailer">✕</button>
+    <iframe
+      id="trailerFrame"
+      src=""
+      title="Movie Trailer"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </div>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <p>© 2026 Movie Reviews. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- JS -->
+<script src="theme.js"></script>
+
+<script>
+  const openBtn = document.getElementById("openTrailer");
+  const closeBtn = document.getElementById("closeTrailer");
+  const modal = document.getElementById("trailerModal");
+  const frame = document.getElementById("trailerFrame");
+
+  openBtn.onclick = () => {
+    frame.src = "https://www.youtube.com/embed/VIDEO_ID_HERE";
+    modal.style.display = "flex";
+  };
+
+  closeBtn.onclick = () => {
+    modal.style.display = "none";
+    frame.src = "";
+  };
+</script>
+
+</body>
+</html>
