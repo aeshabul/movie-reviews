@@ -1,209 +1,4 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Segoe UI", Arial, sans-serif;
-}
-
-body {
-  background: #0e1117;
-  color: #fff;
-}
-
-/* NAVBAR */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 18px 28px;
-  background: #0b0e14;
-}
-
-.logo {
-  font-size: 22px;
-  font-weight: 700;
-}
-
-.navbar a {
-  color: #fff;
-  text-decoration: none;
-  margin-left: 20px;
-  opacity: 0.8;
-}
-
-.navbar a:hover {
-  opacity: 1;
-}
-
-/* LAYOUT */
-.container {
-  max-width: 1200px;
-  margin: 40px auto;
-  padding: 0 20px;
-}
-
-.page-title {
-  font-size: 34px;
-  margin-bottom: 30px;
-}
-
-/* MOVIE ROW */
-.movie-row {
-  display: flex;
-  gap: 24px;
-  overflow-x: auto;
-  padding-bottom: 10px;
-}
-
-.movie-row::-webkit-scrollbar {
-  height: 6px;
-}
-
-.movie-row::-webkit-scrollbar-thumb {
-  background: #2a2f3a;
-  border-radius: 4px;
-}
-
-/* MOVIE CARD */
-.movie-card {
-  min-width: 200px;
-  background: #151a23;
-  border-radius: 10px;
-  overflow: hidden;
-  text-decoration: none;
-  color: #fff;
-  transition: transform 0.3s ease;
-}
-
-.movie-card:hover {
-  transform: translateY(-6px);
-}
-
-.movie-card img {
-  width: 100%;
-  height: 280px;
-  object-fit: cover;
-}
-
-.card-info {
-  padding: 12px;
-}
-
-.card-info h3 {
-  font-size: 15px;
-  margin-bottom: 6px;
-}
-
-.rating {
-  font-size: 13px;
-  opacity: 0.8;
-}
-
-/* FOOTER */
-.footer {
-  text-align: center;
-  padding: 20px;
-  margin-top: 60px;
-  background: #0b0e14;
-  font-size: 13px;
-  opacity: 0.7;
-}
-
-/* MOBILE */
-@media (max-width: 600px) {
-  .page-title {
-    font-size: 26px;
-  }
-}
-/* ===== INSIDE PAGE (OTT STYLE) ===== */
-
-.movie-hero-new {
-  display: flex;
-  gap: 40px;
-  align-items: flex-start;
-  margin-top: 40px;
-  flex-wrap: wrap;
-}
-
-.poster-box img {
-  width: 260px;
-  border-radius: 12px;
-}
-
-.movie-info {
-  max-width: 650px;
-}
-
-.movie-info h1 {
-  font-size: 32px;
-  margin-bottom: 12px;
-}
-
-.rating-row {
-  font-size: 15px;
-  margin-bottom: 14px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.tag {
-  background: #1a1f2b;
-  padding: 4px 8px;
-  border-radius: 4px;
-  font-size: 13px;
-}
-
-.intro {
-  font-size: 16px;
-  opacity: 0.9;
-  line-height: 1.6;
-}
-
-.action-links {
-  margin-top: 20px;
-  display: flex;
-  gap: 14px;
-}
-
-.btn-primary {
-  background: #4da3ff;
-  color: #000;
-  padding: 10px 16px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 600;
-}
-
-.btn-secondary {
-  color: #4da3ff;
-  text-decoration: none;
-  font-size: 14px;
-}
-
-.movie-content {
-  margin-top: 50px;
-  max-width: 900px;
-}
-
-.movie-content h2 {
-  margin-top: 30px;
-  margin-bottom: 10px;
-}
-
-.movie-content p {
-  opacity: 0.9;
-  line-height: 1.7;
-}
-
-/* MOBILE */
-@media (max-width: 700px) {
-  .movie-info h1 {
-    font-size: 24px;
-  }
-}
-/* ===== WATCH NOW CTA ===== */
+/* ===== WATCH NOW CTA (OTT STYLE) ===== */
 
 .watch-actions {
   margin-top: 22px;
@@ -236,4 +31,17 @@ body {
 .watch-note {
   font-size: 13px;
   opacity: 0.7;
+}
+
+/* POSTER GLOW */
+.poster-box {
+  position: relative;
+}
+
+.poster-box::after {
+  content: "";
+  position: absolute;
+  inset: -20px;
+  background: radial-gradient(circle, rgba(77,163,255,0.25), transparent 70%);
+  z-index: -1;
 }
