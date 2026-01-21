@@ -1,6 +1,4 @@
-/* =========================
-   GLOBAL RESET
-========================= */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -14,138 +12,118 @@ body {
   line-height: 1.6;
 }
 
-/* =========================
-   NAVBAR
-========================= */
-.navbar {
+/* NAVBAR */
+.brand-navbar {
+  background: #000;
+  padding: 16px 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 24px;
-  background: #000;
 }
 
-.logo {
-  font-size: 20px;
+.brand-navbar .logo {
+  font-size: 22px;
   font-weight: bold;
 }
 
-.navbar nav a {
+.brand-navbar nav a {
   color: #fff;
-  margin-left: 18px;
   text-decoration: none;
-  opacity: 0.8;
+  margin-left: 20px;
   font-size: 14px;
+  opacity: 0.8;
 }
 
-.navbar nav a:hover {
+.brand-navbar nav a:hover {
   opacity: 1;
 }
 
-/* =========================
-   PAGE WRAPPER
-========================= */
+/* PAGE */
 .page {
   max-width: 1100px;
   margin: 40px auto;
   padding: 0 16px;
 }
 
-.page h1 {
-  margin-bottom: 20px;
-  font-size: 28px;
+.section-title {
+  font-size: 32px;
+  margin-bottom: 30px;
+  border-left: 4px solid #4da3ff;
+  padding-left: 12px;
 }
 
-/* =========================
-   GRID (HOME + INSIDE)
-========================= */
-.card-grid {
+/* REVIEW ROW */
+.review-row {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: 160px 1fr;
   gap: 24px;
-  align-items: start;
-}
-
-/* =========================
-   MOVIE CARD (HOME)
-========================= */
-.movie-card {
-  display: block;
-  background: #181818;
-  border-radius: 8px;
-  overflow: hidden;
+  margin-bottom: 36px;
   text-decoration: none;
   color: #fff;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.movie-card img {
+.review-row img {
   width: 100%;
-  height: 320px;
+  height: 240px;
   object-fit: cover;
-  display: block;
-  transition: transform 0.4s ease;
+  border-radius: 6px;
 }
 
-.movie-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+/* CONTENT */
+.review-content h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
 }
 
-.movie-card:hover img {
-  transform: scale(1.05);
+.summary {
+  font-size: 15px;
+  opacity: 0.85;
+  margin: 10px 0 14px;
 }
 
-/* =========================
-   INSIDE PAGE CONTENT
-========================= */
-.movie-details p {
-  margin-bottom: 8px;
+.read-more {
   font-size: 14px;
-  opacity: 0.9;
-}
-
-.movie-details h2 {
-  margin: 16px 0 8px;
-  font-size: 20px;
-}
-
-.movie-details a {
   color: #4da3ff;
-  text-decoration: none;
-  font-size: 14px;
 }
 
-.movie-details a:hover {
-  text-decoration: underline;
+/* SCORE BADGE */
+.score-badge {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 6px 10px;
+  border-radius: 4px;
 }
 
-/* =========================
-   FOOTER
-========================= */
+.score-good {
+  background: #1f7a1f;
+}
+
+.score-average {
+  background: #a36b00;
+}
+
+/* FOOTER */
 .footer {
+  background: #000;
   text-align: center;
   padding: 20px;
   margin-top: 60px;
-  background: #000;
-  opacity: 0.75;
   font-size: 13px;
+  opacity: 0.75;
 }
 
-/* =========================
-   RESPONSIVE (MOBILE)
-========================= */
-@media (max-width: 600px) {
-  .page h1 {
-    font-size: 22px;
+/* MOBILE */
+@media (max-width: 700px) {
+  .review-row {
+    grid-template-columns: 1fr;
   }
 
-  .movie-card img {
-    height: 260px;
+  .review-row img {
+    height: 300px;
   }
 
-  .navbar nav a {
-    margin-left: 12px;
-    font-size: 13px;
+  .section-title {
+    font-size: 24px;
   }
 }
