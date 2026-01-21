@@ -6,7 +6,23 @@
   <meta name="description" content="Latest Hollywood movie reviews, ratings and verdicts. Honest movie reviews.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+
+  <!-- Search input basic styling -->
+  <style>
+    .search-box {
+      margin: 20px 0;
+    }
+    .search-box input {
+      width: 100%;
+      padding: 12px 14px;
+      border-radius: 6px;
+      border: none;
+      outline: none;
+      font-size: 15px;
+    }
+  </style>
 </head>
+
 <body>
 
 <header class="navbar">
@@ -20,28 +36,57 @@
 </header>
 
 <main class="page">
+
   <h1>Latest Movie Reviews</h1>
 
-  <div class="card-grid">
+  <!-- SEARCH BOX -->
+  <div class="search-box">
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="Search movies..."
+      onkeyup="searchMovies()">
+  </div>
 
-    <a href="wonder-woman.html" class="movie-card">
+  <!-- MOVIE GRID -->
+  <div class="card-grid" id="movieGrid">
+
+    <a href="wonder-woman.html" class="movie-card" data-title="wonder woman">
       <img src="images/wonder-woman.webp" alt="Wonder Woman Poster">
     </a>
 
-    <a href="the-batman.html" class="movie-card">
+    <a href="the-batman.html" class="movie-card" data-title="the batman">
       <img src="images/the-batman.webp" alt="The Batman Poster">
     </a>
 
-    <a href="avatar-2.html" class="movie-card">
+    <a href="avatar-2.html" class="movie-card" data-title="avatar the way of water">
       <img src="images/avatar-2.webp" alt="Avatar The Way of Water Poster">
     </a>
 
   </div>
+
 </main>
 
 <footer class="footer">
   © 2026 Movie Reviews · Honest Reviews
 </footer>
+
+<!-- SEARCH SCRIPT -->
+<script>
+function searchMovies() {
+  const input = document.getElementById("searchInput").value.toLowerCase();
+  const cards = document.querySelectorAll(".movie-card");
+
+  cards.forEach(card => {
+    const title = card.getAttribute("data-title");
+    if (title.includes(input)) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+  });
+}
+</script>
 
 </body>
 </html>
