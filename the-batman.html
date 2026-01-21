@@ -1,112 +1,150 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <title>The Batman (2022) Review, Rating & Verdict | MovieReviews</title>
-  <meta name="description" content="The Batman (2022) full movie review, rating, cast, story overview and final verdict.">
+  <title>The Batman Review | Movie Reviews</title>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- SEO -->
+  <meta name="description" content="The Batman (2022) full movie review, rating, story analysis and trailer. Dark, gritty and realistic Batman reboot review.">
+  <meta name="theme-color" content="#ffffff">
 
-  <link rel="canonical" href="https://movie-reviews-six-rosy.vercel.app/the-batman.html">
-
-  <meta property="og:type" content="article">
-  <meta property="og:title" content="The Batman (2022) Movie Review">
-  <meta property="og:description" content="The Batman review, rating and verdict.">
-  <meta property="og:image" content="https://movie-reviews-six-rosy.vercel.app/images/the-batman.webp">
-  <meta property="og:url" content="https://movie-reviews-six-rosy.vercel.app/the-batman.html">
-
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header class="navbar">
-  <div class="logo">MovieReviews</div>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="#">Movies</a>
-    <a href="#">Reviews</a>
-    <a href="#">OTT</a>
-  </nav>
+<!-- ===== HEADER ===== -->
+<header class="header">
+  <div class="container header-inner">
+    <div class="logo">
+      <img src="images/logo-light.webp" alt="Movie Reviews" class="logo-light">
+      <img src="images/logo-dark.webp" alt="Movie Reviews" class="logo-dark">
+    </div>
+
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="#">Hollywood</a>
+      <a href="#">OTT</a>
+    </nav>
+
+    <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+      🌙
+    </button>
+  </div>
 </header>
 
-<main class="container">
+<!-- ===== MOVIE HERO ===== -->
+<section class="hero">
+  <div class="container hero-inner">
 
-  <section class="movie-hero-new">
+    <div class="hero-text">
+      <span class="badge">Movie Review</span>
 
-    <div class="poster-box">
-      <img src="images/the-batman.webp" alt="The Batman Movie Poster">
-    </div>
-
-    <div class="movie-info">
       <h1>The Batman (2022)</h1>
 
-      <div class="rating-row">
-        ⭐ 4.3 / 5
-        <span class="tag">Action</span>
-        <span class="tag">Crime</span>
-        <span class="tag">Drama</span>
-        <span class="tag">2h 56m</span>
-      </div>
-
-      <p class="intro">
-        A dark, grounded and detective-driven reboot that reimagines Batman
-        as a noir investigator within a corrupt Gotham City.
+      <p>
+        Matt Reeves presents a darker, detective-style Batman that focuses on
+        crime, corruption and psychological depth rather than flashy action.
       </p>
 
-      <div class="watch-actions">
-        <a href="#" class="watch-btn">▶ Watch Now</a>
-        <span class="watch-note">Available on OTT platforms</span>
+      <div class="movie-meta">
+        <span>⭐ Rating: <strong>4 / 5</strong></span><br>
+        <span>🎬 Release: 2022</span><br>
+        <span>⏱ Runtime: 176 min</span>
       </div>
+
+      <button class="btn-primary" id="openTrailer">
+        ▶ Watch Trailer
+      </button>
     </div>
 
-  </section>
+    <div class="hero-poster">
+      <img src="images/the-batman.webp" alt="The Batman Poster">
+    </div>
 
-  <section class="movie-content">
+  </div>
+</section>
 
-    <h2>Critic Review</h2>
-    <p>
-      Matt Reeves delivers a slow-burn noir thriller focused on atmosphere,
-      psychology, and detective storytelling rather than spectacle.
-    </p>
+<!-- ===== REVIEW CONTENT ===== -->
+<section class="movies">
+  <div class="container">
 
-    <h2>Cast</h2>
-    <p>
-      Robert Pattinson, Zoë Kravitz, Paul Dano
-    </p>
+    <h2 class="section-title">Story & Review</h2>
 
-    <h2>Final Verdict</h2>
-    <p>
-      One of the most mature and atmospheric Batman films ever made.
-    </p>
+    <article class="review-content">
+      <p>
+        <strong>The Batman</strong> follows Bruce Wayne in his second year as
+        Gotham’s vigilante, where he investigates a series of murders linked
+        to deep-rooted corruption in the city.
+      </p>
 
-    <p><a href="index.html" class="btn-secondary">← Back to Home</a></p>
+      <p>
+        Robert Pattinson delivers a brooding and grounded performance, while
+        Gotham City feels grim, realistic and dangerous. The detective angle
+        sets this film apart from previous Batman movies.
+      </p>
 
-  </section>
+      <p>
+        The film is slow-paced at times, but the atmosphere, cinematography and
+        music keep the tension alive throughout.
+      </p>
+    </article>
 
-</main>
+    <h2 class="section-title">Final Verdict</h2>
 
+    <article class="review-content">
+      <p>
+        The Batman is not a typical superhero movie. It’s dark, serious and
+        character-driven. If you enjoy noir-style storytelling and realistic
+        comic book adaptations, this is a must-watch.
+      </p>
+    </article>
+
+  </div>
+</section>
+
+<!-- ===== TRAILER MODAL ===== -->
+<div class="trailer-modal" id="trailerModal">
+  <div class="trailer-box">
+    <button class="close-btn" id="closeTrailer">✕</button>
+    <iframe
+      id="trailerFrame"
+      src=""
+      title="The Batman Trailer"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </div>
+</div>
+
+<!-- ===== FOOTER ===== -->
 <footer class="footer">
-  © 2026 MovieReviews
+  <div class="container footer-inner">
+    <p>© 2026 Movie Reviews. All rights reserved.</p>
+  </div>
 </footer>
 
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"Review",
-  "itemReviewed":{
-    "@type":"Movie",
-    "name":"The Batman",
-    "image":"https://movie-reviews-six-rosy.vercel.app/images/the-batman.webp",
-    "datePublished":"2022-03-04",
-    "genre":["Action","Crime","Drama"],
-    "director":{"@type":"Person","name":"Matt Reeves"}
-  },
-  "reviewRating":{"@type":"Rating","ratingValue":"4.3","bestRating":"5"},
-  "author":{"@type":"Organization","name":"MovieReviews"},
-  "reviewBody":"The Batman is a dark, grounded and detective-driven take on the iconic superhero."
-}
+<!-- JS -->
+<script src="theme.js"></script>
+
+<script>
+  const openBtn = document.getElementById("openTrailer");
+  const closeBtn = document.getElementById("closeTrailer");
+  const modal = document.getElementById("trailerModal");
+  const frame = document.getElementById("trailerFrame");
+
+  openBtn.onclick = () => {
+    frame.src = "https://www.youtube.com/embed/mqqft2x_Aa4";
+    modal.style.display = "flex";
+  };
+
+  closeBtn.onclick = () => {
+    modal.style.display = "none";
+    frame.src = "";
+  };
 </script>
 
 </body>
