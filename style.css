@@ -203,3 +203,37 @@ body {
     font-size: 24px;
   }
 }
+/* ===== WATCH NOW CTA ===== */
+
+.watch-actions {
+  margin-top: 22px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.watch-btn {
+  background: linear-gradient(135deg, #1ea0ff, #4da3ff);
+  color: #000;
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 8px 25px rgba(77,163,255,0.35);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.watch-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(77,163,255,0.55);
+}
+
+.watch-note {
+  font-size: 13px;
+  opacity: 0.7;
+}
