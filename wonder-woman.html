@@ -1,110 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-
-  <title>Wonder Woman (2017) Review, Rating & Verdict | MovieReviews</title>
-  <meta name="description" content="Wonder Woman (2017) full movie review, rating, cast, story overview and final verdict.">
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="canonical" href="https://movie-reviews-six-rosy.vercel.app/wonder-woman.html">
-
-  <meta property="og:type" content="article">
-  <meta property="og:title" content="Wonder Woman (2017) Movie Review">
-  <meta property="og:description" content="Wonder Woman review, rating and verdict.">
-  <meta property="og:image" content="https://movie-reviews-six-rosy.vercel.app/images/wonder-woman.webp">
-  <meta property="og:url" content="https://movie-reviews-six-rosy.vercel.app/wonder-woman.html">
-
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Wonder Woman (2017) | Movie Reviews</title>
+<meta name="description" content="Wonder Woman (2017) full movie review, trailer, rating and verdict.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="canonical" href="https://movie-reviews-six-rosy.vercel.app/wonder-woman.html">
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header class="navbar">
+<div class="navbar">
   <div class="logo">MovieReviews</div>
-  <nav>
+  <div>
     <a href="index.html">Home</a>
     <a href="#">Movies</a>
     <a href="#">Reviews</a>
-    <a href="#">OTT</a>
-  </nav>
-</header>
+  </div>
+</div>
 
-<main class="container">
+<div class="hero">
+  <div class="poster">
+    <img src="images/wonder-woman.webp" alt="Wonder Woman Poster">
+  </div>
 
-  <section class="movie-hero-new">
+  <div class="info">
+    <h1>Wonder Woman (2017)</h1>
 
-    <div class="poster-box">
-      <img src="images/wonder-woman.webp" alt="Wonder Woman Movie Poster">
+    <div class="meta">
+      <span>Action, Fantasy</span>
+      <span>⭐ 4.5 / 5</span>
+      <span>Director: Patty Jenkins</span>
     </div>
 
-    <div class="movie-info">
-      <h1>Wonder Woman (2017)</h1>
+    <p class="desc">
+      Wonder Woman is a powerful superhero film with strong performances,
+      emotional depth and visually stunning action sequences.
+    </p>
 
-      <div class="rating-row">
-        ⭐ 4.5 / 5
-        <span class="tag">Action</span>
-        <span class="tag">Fantasy</span>
-        <span class="tag">2h 21m</span>
-      </div>
-
-      <p class="intro">
-        Wonder Woman is an emotionally powerful origin story that blends mythology,
-        heroism, and humanity, redefining DC’s cinematic direction.
-      </p>
-
-      <div class="watch-actions">
-        <a href="#" class="watch-btn">▶ Watch Now</a>
-        <span class="watch-note">Available on OTT platforms</span>
-      </div>
+    <div class="watch-actions">
+      <button class="watch-btn" onclick="openTrailer()">▶ Watch Trailer</button>
     </div>
+  </div>
+</div>
 
-  </section>
+<div class="section">
+  <h2>Our Verdict</h2>
+  <p>
+    One of the best DC movies ever made, blending heart, heroism and spectacle
+    into an unforgettable cinematic experience.
+  </p>
+</div>
 
-  <section class="movie-content">
+<div class="footer">
+  © 2026 MovieReviews · Independent Movie Review Platform
+</div>
 
-    <h2>Critic Review</h2>
-    <p>
-      Patty Jenkins crafts a superhero film rooted in empathy and purpose.
-      Gal Gadot’s portrayal brings strength and sincerity, elevating the genre.
-    </p>
+<!-- TRAILER MODAL -->
+<div id="trailerModal" class="trailer-modal">
+  <div class="trailer-box">
+    <span class="close-btn" onclick="closeTrailer()">×</span>
+    <iframe id="trailerFrame" width="100%" height="100%"
+      src=""
+      allow="autoplay; encrypted-media"
+      allowfullscreen>
+    </iframe>
+  </div>
+</div>
 
-    <h2>Cast</h2>
-    <p>
-      Gal Gadot, Chris Pine, Robin Wright
-    </p>
-
-    <h2>Final Verdict</h2>
-    <p>
-      A landmark superhero film that proves heart and hope matter as much as action.
-    </p>
-
-    <p><a href="index.html" class="btn-secondary">← Back to Home</a></p>
-
-  </section>
-
-</main>
-
-<footer class="footer">
-  © 2026 MovieReviews
-</footer>
-
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"Review",
-  "itemReviewed":{
-    "@type":"Movie",
-    "name":"Wonder Woman",
-    "image":"https://movie-reviews-six-rosy.vercel.app/images/wonder-woman.webp",
-    "datePublished":"2017-06-02",
-    "genre":["Action","Fantasy"],
-    "director":{"@type":"Person","name":"Patty Jenkins"}
-  },
-  "reviewRating":{"@type":"Rating","ratingValue":"4.5","bestRating":"5"},
-  "author":{"@type":"Organization","name":"MovieReviews"},
-  "reviewBody":"Wonder Woman is a powerful and emotionally resonant superhero origin story."
+<script>
+function openTrailer() {
+  document.getElementById("trailerModal").classList.add("active");
+  document.getElementById("trailerFrame").src =
+    "https://www.youtube.com/embed/1Q8fG0TtVAY?si=xBvKJQDrUIWYEh-A";
+}
+function closeTrailer() {
+  document.getElementById("trailerModal").classList.remove("active");
+  document.getElementById("trailerFrame").src = "";
 }
 </script>
 
