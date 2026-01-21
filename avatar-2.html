@@ -1,170 +1,138 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <title>Avatar: The Way of Water (2022) Review, Rating & Verdict | MovieReviews</title>
+  <title>Avatar: The Way of Water Review | Movie Reviews</title>
 
-  <meta name="description" content="Avatar: The Way of Water (2022) full movie review, rating, cast, story overview and final verdict.">
+  <!-- SEO -->
+  <meta name="description" content="Avatar: The Way of Water full movie review, rating, story analysis and trailer. Honest review with visuals and verdict.">
+  <meta name="theme-color" content="#ffffff">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- CANONICAL -->
-  <link rel="canonical" href="https://movie-reviews-six-rosy.vercel.app/avatar-2.html">
-
-  <!-- OPEN GRAPH -->
-  <meta property="og:type" content="article">
-  <meta property="og:title" content="Avatar: The Way of Water (2022) Movie Review">
-  <meta property="og:description" content="Avatar: The Way of Water review, rating and verdict.">
-  <meta property="og:image" content="https://movie-reviews-six-rosy.vercel.app/images/avatar-2.webp">
-  <meta property="og:url" content="https://movie-reviews-six-rosy.vercel.app/avatar-2.html">
-  <meta property="og:site_name" content="MovieReviews">
-
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header class="navbar">
-  <div class="logo">MovieReviews</div>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="#">Movies</a>
-    <a href="#">Reviews</a>
-    <a href="#">OTT</a>
-  </nav>
-</header>
-
-<main class="container">
-
-  <!-- HERO SECTION -->
-  <section class="movie-hero-new">
-
-    <!-- POSTER -->
-    <div class="poster-box">
-      <img src="images/avatar-2.webp" alt="Avatar The Way of Water Movie Poster">
+<!-- ===== HEADER (SAME AS HOME) ===== -->
+<header class="header">
+  <div class="container header-inner">
+    <div class="logo">
+      <img src="images/logo-light.webp" alt="Movie Reviews" class="logo-light">
+      <img src="images/logo-dark.webp" alt="Movie Reviews" class="logo-dark">
     </div>
 
-    <!-- INFO -->
-    <div class="movie-info">
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="#">Hollywood</a>
+      <a href="#">OTT</a>
+    </nav>
 
-      <h1>Avatar: The Way of Water (2022)</h1>
+    <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+      🌙
+    </button>
+  </div>
+</header>
 
-      <div class="rating-row">
-        ⭐ 4.1 / 5
-        <span class="tag">Sci-Fi</span>
-        <span class="tag">Adventure</span>
-        <span class="tag">3h 12m</span>
-      </div>
-
-      <p class="intro">
-        Avatar: The Way of Water expands the world of Pandora with breathtaking
-        underwater visuals and a more intimate, family-focused story, reaffirming
-        James Cameron’s mastery of cinematic spectacle.
+<!-- ===== MOVIE HERO ===== -->
+<section class="hero">
+  <div class="container hero-inner">
+    <div class="hero-text">
+      <span class="badge">Movie Review</span>
+      <h1>Avatar: The Way of Water</h1>
+      <p>
+        James Cameron expands the world of Pandora with stunning underwater
+        visuals, emotional storytelling, and next-level cinematic experience.
       </p>
 
-     <!-- WATCH TRAILER BUTTON -->
-<div class="watch-actions">
-  <button class="watch-btn" onclick="openTrailer()">
-    ▶ Watch Trailer
-  </button>
-</div>
+      <div class="movie-meta">
+        <span>⭐ Rating: <strong>4.5 / 5</strong></span><br>
+        <span>🎬 Release: 2022</span><br>
+        <span>⏱ Runtime: 192 min</span>
+      </div>
 
-<!-- TRAILER MODAL -->
-<div id="trailerModal" class="trailer-modal">
+      <button class="btn-primary" id="openTrailer">
+        ▶ Watch Trailer
+      </button>
+    </div>
+
+    <div class="hero-poster">
+      <img src="images/avatar-2.webp" alt="Avatar The Way of Water Poster">
+    </div>
+  </div>
+</section>
+
+<!-- ===== REVIEW CONTENT ===== -->
+<section class="movies">
+  <div class="container">
+
+    <h2 class="section-title">Story & Review</h2>
+
+    <article class="review-content">
+      <p>
+        <strong>Avatar: The Way of Water</strong> follows Jake Sully and Neytiri
+        as they build a family and face new threats that force them to explore
+        the oceans of Pandora. The sequel dives deep into emotions, culture,
+        and survival.
+      </p>
+
+      <p>
+        Visually, the film is unmatched. The underwater motion-capture
+        technology and world-building once again set a new benchmark in
+        cinema. While the story takes its time, the emotional payoff and
+        spectacle make it worth the wait.
+      </p>
+
+      <p>
+        If you love immersive cinema experiences, Avatar 2 is a must-watch on
+        the biggest screen possible.
+      </p>
+    </article>
+
+  </div>
+</section>
+
+<!-- ===== TRAILER MODAL ===== -->
+<div class="trailer-modal" id="trailerModal">
   <div class="trailer-box">
-    <span class="close-btn" onclick="closeTrailer()">×</span>
-
+    <button class="close-btn" id="closeTrailer">✕</button>
     <iframe
       id="trailerFrame"
-      width="100%"
-      height="100%"
       src=""
-      title="Movie Trailer"
+      title="Avatar 2 Trailer"
       frameborder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen>
     </iframe>
   </div>
 </div>
-  </section>
 
-  <!-- CONTENT -->
-  <section class="movie-content">
-
-    <h2>Critic Review</h2>
-    <p>
-      James Cameron returns with a sequel that prioritizes immersion over plot complexity.
-      The underwater sequences are among the most visually impressive moments ever filmed,
-      making this a true big-screen experience.
-    </p>
-
-    <h2>Cast</h2>
-    <p>
-      Sam Worthington, Zoe Saldaña, Sigourney Weaver, Stephen Lang
-    </p>
-
-    <h2>Final Verdict</h2>
-    <p>
-      A must-watch cinematic spectacle that showcases the future of visual storytelling.
-    </p>
-
-    <p><a href="index.html" class="btn-secondary">← Back to Home</a></p>
-
-  </section>
-
-</main>
-
+<!-- ===== FOOTER ===== -->
 <footer class="footer">
-  © 2026 MovieReviews · Independent Movie Discovery Platform
+  <div class="container footer-inner">
+    <p>© 2026 Movie Reviews. All rights reserved.</p>
+  </div>
 </footer>
 
-<!-- STRUCTURED DATA : MOVIE REVIEW -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Review",
-  "itemReviewed": {
-    "@type": "Movie",
-    "name": "Avatar: The Way of Water",
-    "image": "https://movie-reviews-six-rosy.vercel.app/images/avatar-2.webp",
-    "datePublished": "2022-12-16",
-    "genre": ["Sci-Fi", "Adventure"],
-    "director": {
-      "@type": "Person",
-      "name": "James Cameron"
-    }
-  },
-  "reviewRating": {
-    "@type": "Rating",
-    "ratingValue": "4.1",
-    "bestRating": "5"
-  },
-  "author": {
-    "@type": "Organization",
-    "name": "MovieReviews"
-  },
-  "reviewBody": "Avatar: The Way of Water is a visually spectacular sequel with breathtaking underwater cinematography and immersive world-building."
-}
-</script>
+<!-- JS -->
+<script src="theme.js"></script>
+
 <script>
-function openTrailer() {
+  const openBtn = document.getElementById("openTrailer");
+  const closeBtn = document.getElementById("closeTrailer");
   const modal = document.getElementById("trailerModal");
   const frame = document.getElementById("trailerFrame");
 
-  // 🔁 YAHAN APNA TRAILER URL DAALO
-  frame.src = "https://www.youtube.com/embed/nb_fFj_0rq8?si=X7kSWbgCqN016oj9";
+  openBtn.onclick = () => {
+    frame.src = "https://www.youtube.com/embed/d9MyW72ELq0";
+    modal.style.display = "flex";
+  };
 
-  modal.classList.add("active");
-}
-
-function closeTrailer() {
-  const modal = document.getElementById("trailerModal");
-  const frame = document.getElementById("trailerFrame");
-
-  modal.classList.remove("active");
-  frame.src = "";
-}
+  closeBtn.onclick = () => {
+    modal.style.display = "none";
+    frame.src = "";
+  };
 </script>
 
 </body>
