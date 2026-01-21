@@ -1,83 +1,150 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-<meta charset="UTF-8">
-<title>Wonder Woman (2017) | Movie Reviews</title>
-<meta name="description" content="Wonder Woman (2017) full movie review, trailer, rating and verdict.">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="canonical" href="https://movie-reviews-six-rosy.vercel.app/wonder-woman.html">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Wonder Woman Review | Movie Reviews</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Wonder Woman (2017) full movie review, rating, story analysis and trailer. A powerful superhero origin story review.">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="navbar">
-  <div class="logo">MovieReviews</div>
-  <div>
-    <a href="index.html">Home</a>
-    <a href="#">Movies</a>
-    <a href="#">Reviews</a>
-  </div>
-</div>
-
-<div class="hero">
-  <div class="poster">
-    <img src="images/wonder-woman.webp" alt="Wonder Woman Poster">
-  </div>
-
-  <div class="info">
-    <h1>Wonder Woman (2017)</h1>
-
-    <div class="meta">
-      <span>Action, Fantasy</span>
-      <span>⭐ 4.5 / 5</span>
-      <span>Director: Patty Jenkins</span>
+<!-- ===== HEADER ===== -->
+<header class="header">
+  <div class="container header-inner">
+    <div class="logo">
+      <img src="images/logo-light.webp" alt="Movie Reviews" class="logo-light">
+      <img src="images/logo-dark.webp" alt="Movie Reviews" class="logo-dark">
     </div>
 
-    <p class="desc">
-      Wonder Woman is a powerful superhero film with strong performances,
-      emotional depth and visually stunning action sequences.
-    </p>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="#">Hollywood</a>
+      <a href="#">OTT</a>
+    </nav>
 
-    <div class="watch-actions">
-      <button class="watch-btn" onclick="openTrailer()">▶ Watch Trailer</button>
-    </div>
+    <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+      🌙
+    </button>
   </div>
-</div>
+</header>
 
-<div class="section">
-  <h2>Our Verdict</h2>
-  <p>
-    One of the best DC movies ever made, blending heart, heroism and spectacle
-    into an unforgettable cinematic experience.
-  </p>
-</div>
+<!-- ===== MOVIE HERO ===== -->
+<section class="hero">
+  <div class="container hero-inner">
 
-<div class="footer">
-  © 2026 MovieReviews · Independent Movie Review Platform
-</div>
+    <div class="hero-text">
+      <span class="badge">Movie Review</span>
 
-<!-- TRAILER MODAL -->
-<div id="trailerModal" class="trailer-modal">
+      <h1>Wonder Woman (2017)</h1>
+
+      <p>
+        A powerful origin story that introduces Diana of Themyscira as a brave
+        warrior who steps into the world of men to stop a global war.
+      </p>
+
+      <div class="movie-meta">
+        <span>⭐ Rating: <strong>4 / 5</strong></span><br>
+        <span>🎬 Release: 2017</span><br>
+        <span>⏱ Runtime: 141 min</span>
+      </div>
+
+      <button class="btn-primary" id="openTrailer">
+        ▶ Watch Trailer
+      </button>
+    </div>
+
+    <div class="hero-poster">
+      <img src="images/wonder-woman.webp" alt="Wonder Woman Poster">
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== REVIEW CONTENT ===== -->
+<section class="movies">
+  <div class="container">
+
+    <h2 class="section-title">Story & Review</h2>
+
+    <article class="review-content">
+      <p>
+        <strong>Wonder Woman</strong> follows Diana, an Amazonian princess who
+        leaves her hidden island home after an American pilot crashes nearby
+        and tells her about a massive war raging across the world.
+      </p>
+
+      <p>
+        Gal Gadot shines as Wonder Woman, bringing strength, compassion and
+        grace to the role. The film balances action, emotion and humor while
+        delivering a strong message about humanity.
+      </p>
+
+      <p>
+        The first half of the movie is especially strong, though the climax
+        feels slightly weaker compared to the buildup.
+      </p>
+    </article>
+
+    <h2 class="section-title">Final Verdict</h2>
+
+    <article class="review-content">
+      <p>
+        Wonder Woman is one of DC’s strongest superhero films. It delivers an
+        inspiring origin story with memorable action scenes and a powerful
+        lead performance.
+      </p>
+    </article>
+
+  </div>
+</section>
+
+<!-- ===== TRAILER MODAL ===== -->
+<div class="trailer-modal" id="trailerModal">
   <div class="trailer-box">
-    <span class="close-btn" onclick="closeTrailer()">×</span>
-    <iframe id="trailerFrame" width="100%" height="100%"
+    <button class="close-btn" id="closeTrailer">✕</button>
+    <iframe
+      id="trailerFrame"
       src=""
-      allow="autoplay; encrypted-media"
+      title="Wonder Woman Trailer"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen>
     </iframe>
   </div>
 </div>
 
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <p>© 2026 Movie Reviews. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- JS -->
+<script src="theme.js"></script>
+
 <script>
-function openTrailer() {
-  document.getElementById("trailerModal").classList.add("active");
-  document.getElementById("trailerFrame").src =
-    "https://www.youtube.com/embed/1Q8fG0TtVAY?si=xBvKJQDrUIWYEh-A";
-}
-function closeTrailer() {
-  document.getElementById("trailerModal").classList.remove("active");
-  document.getElementById("trailerFrame").src = "";
-}
+  const openBtn = document.getElementById("openTrailer");
+  const closeBtn = document.getElementById("closeTrailer");
+  const modal = document.getElementById("trailerModal");
+  const frame = document.getElementById("trailerFrame");
+
+  openBtn.onclick = () => {
+    frame.src = "https://www.youtube.com/embed/1Q8fG0TtVAY";
+    modal.style.display = "flex";
+  };
+
+  closeBtn.onclick = () => {
+    modal.style.display = "none";
+    frame.src = "";
+  };
 </script>
 
 </body>
