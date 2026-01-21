@@ -1,272 +1,78 @@
-/* =========================
-   GLOBAL RESET
-========================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-               Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue",
-               Arial, sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 body {
-  background: radial-gradient(circle at top, #0f1724, #02040a 70%);
-  color: #ffffff;
-  line-height: 1.6;
+  background: #0e1117;
+  color: #fff;
 }
 
-/* =========================
-   NAVBAR
-========================= */
+/* NAVBAR */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 18px 28px;
-  background: rgba(0,0,0,0.7);
-  backdrop-filter: blur(10px);
+  padding: 18px 40px;
+  background: #0b0e13;
 }
 
-.logo {
+.navbar .logo {
   font-size: 20px;
-  font-weight: 700;
-  letter-spacing: 0.5px;
+  font-weight: bold;
 }
 
-.navbar nav a {
-  color: #ffffff;
+.navbar a {
+  color: #ccc;
+  margin-left: 18px;
   text-decoration: none;
-  margin-left: 20px;
   font-size: 14px;
-  opacity: 0.85;
 }
 
-.navbar nav a:hover {
-  opacity: 1;
-}
-
-/* =========================
-   CONTAINER
-========================= */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px 20px;
-}
-
-/* =========================
-   HOME PAGE
-========================= */
-.page-title {
-  font-size: 34px;
-  margin-bottom: 30px;
-}
-
-.movie-row {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 24px;
-}
-
-.movie-card {
-  background: linear-gradient(180deg, #111827, #02040a);
-  border-radius: 14px;
-  overflow: hidden;
-  text-decoration: none;
+.navbar a:hover {
   color: #fff;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.movie-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 18px 40px rgba(0,0,0,0.6);
+/* HERO */
+.hero {
+  display: flex;
+  gap: 40px;
+  padding: 60px 40px;
+  max-width: 1200px;
+  margin: auto;
 }
 
-.movie-card img {
-  width: 100%;
-  height: 340px;
-  object-fit: cover;
+.poster img {
+  width: 300px;
+  border-radius: 14px;
 }
 
-.card-info {
-  padding: 14px;
+/* INFO */
+.info h1 {
+  font-size: 32px;
+  margin-bottom: 12px;
 }
 
-.card-info h3 {
-  font-size: 16px;
-  margin-bottom: 6px;
-}
-
-.rating {
+.meta {
+  color: #aaa;
   font-size: 14px;
-  opacity: 0.85;
-}
-
-/* =========================
-   INSIDE PAGE – HERO
-========================= */
-.movie-hero-new {
-  display: flex;
-  gap: 50px;
-  align-items: flex-start;
-  flex-wrap: wrap;
-}
-
-.poster-box {
-  position: relative;
-}
-
-.poster-box img {
-  width: 280px;
-  border-radius: 16px;
-}
-
-.poster-box::after {
-  content: "";
-  position: absolute;
-  inset: -25px;
-  background: radial-gradient(circle,
-    rgba(77,163,255,0.25),
-    transparent 70%);
-  z-index: -1;
-}
-
-/* =========================
-   MOVIE INFO
-========================= */
-.movie-info {
-  max-width: 650px;
-}
-
-.movie-info h1 {
-  font-size: 34px;
-  margin-bottom: 14px;
-}
-
-.rating-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  font-size: 15px;
   margin-bottom: 16px;
 }
 
-.tag {
-  background: rgba(255,255,255,0.08);
-  padding: 4px 10px;
-  border-radius: 999px;
-  font-size: 13px;
+.meta span {
+  margin-right: 14px;
 }
 
-.intro {
-  font-size: 16px;
-  opacity: 0.9;
-}
-
-/* =========================
-   WATCH NOW BUTTON
-========================= */
-.watch-actions {
-  margin-top: 24px;
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-
-.watch-btn {
-  background: linear-gradient(135deg, #1ea0ff, #4da3ff);
-  color: #000;
-  padding: 13px 26px;
-  border-radius: 999px;
+.desc {
   font-size: 15px;
-  font-weight: 600;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  box-shadow: 0 10px 30px rgba(77,163,255,0.35);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  line-height: 1.6;
+  color: #ddd;
+  max-width: 600px;
 }
 
-.watch-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 14px 40px rgba(77,163,255,0.55);
-}
-
-.watch-note {
-  font-size: 13px;
-  opacity: 0.7;
-}
-
-/* =========================
-   MOVIE CONTENT
-========================= */
-.movie-content {
-  margin-top: 60px;
-  max-width: 900px;
-}
-
-.movie-content h2 {
-  font-size: 22px;
-  margin: 32px 0 10px;
-}
-
-.movie-content p {
-  font-size: 15px;
-  opacity: 0.9;
-}
-
-/* =========================
-   BUTTON SECONDARY
-========================= */
-.btn-secondary {
-  color: #4da3ff;
-  text-decoration: none;
-  font-size: 14px;
-}
-
-.btn-secondary:hover {
-  text-decoration: underline;
-}
-
-/* =========================
-   FOOTER
-========================= */
-.footer {
-  text-align: center;
-  padding: 24px 16px;
-  margin-top: 80px;
-  font-size: 14px;
-  opacity: 0.6;
-  background: rgba(0,0,0,0.6);
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-@media (max-width: 768px) {
-
-  .movie-hero-new {
-    gap: 30px;
-  }
-
-  .poster-box img {
-    width: 100%;
-    max-width: 320px;
-  }
-
-  .movie-info h1 {
-    font-size: 26px;
-  }
-
-  .page-title {
-    font-size: 26px;
-  }
-/* =========================
-   WATCH TRAILER BUTTON
-========================= */
+/* BUTTON */
 .watch-actions {
   margin-top: 24px;
 }
@@ -280,28 +86,20 @@ body {
   font-weight: 600;
   border: none;
   cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .watch-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 30px rgba(255,255,255,0.25);
+  background: #eaeaea;
 }
 
-/* =========================
-   TRAILER MODAL
-========================= */
+/* MODAL */
 .trailer-modal {
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.85);
-  backdrop-filter: blur(6px);
   display: none;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   z-index: 9999;
 }
 
@@ -314,12 +112,10 @@ body {
   max-width: 900px;
   aspect-ratio: 16 / 9;
   background: #000;
-  border-radius: 14px;
+  border-radius: 12px;
   position: relative;
-  overflow: hidden;
 }
 
-/* Close Button */
 .close-btn {
   position: absolute;
   top: 10px;
@@ -327,6 +123,31 @@ body {
   font-size: 28px;
   color: #fff;
   cursor: pointer;
-  z-index: 10;
 }
 
+/* CONTENT */
+.section {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 40px 60px;
+}
+
+.section h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.section p {
+  font-size: 15px;
+  color: #ddd;
+  line-height: 1.7;
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: #0b0e13;
+  color: #777;
+  font-size: 13px;
+}
