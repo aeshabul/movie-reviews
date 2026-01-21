@@ -2,9 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Movie Reviews & Ratings | Discover Movies</title>
-  <meta name="description" content="Discover latest movies, ratings, reviews and trailers. A premium movie discovery platform.">
+
+  <title>Movie Reviews, Ratings & Verdicts | MovieReviews</title>
+
+  <meta name="description" content="Discover latest movie reviews, ratings, critic verdicts and detailed analysis. A premium movie discovery and review platform.">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CANONICAL -->
+  <link rel="canonical" href="https://movie-reviews-six-rosy.vercel.app/">
+
+  <!-- OPEN GRAPH -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Movie Reviews & Ratings | MovieReviews">
+  <meta property="og:description" content="Discover latest movie reviews, ratings and critic verdicts.">
+  <meta property="og:image" content="https://movie-reviews-six-rosy.vercel.app/images/avatar-2.webp">
+  <meta property="og:url" content="https://movie-reviews-six-rosy.vercel.app/">
+  <meta property="og:site_name" content="MovieReviews">
+
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -28,7 +43,7 @@
 
     <!-- AVATAR -->
     <a href="avatar-2.html" class="movie-card">
-      <img src="images/avatar-2.webp" alt="Avatar The Way of Water">
+      <img src="images/avatar-2.webp" alt="Avatar The Way of Water Movie Poster">
       <div class="card-info">
         <h3>Avatar: The Way of Water</h3>
         <span class="rating">⭐ 4.1</span>
@@ -37,7 +52,7 @@
 
     <!-- BATMAN -->
     <a href="the-batman.html" class="movie-card">
-      <img src="images/the-batman.webp" alt="The Batman">
+      <img src="images/the-batman.webp" alt="The Batman Movie Poster">
       <div class="card-info">
         <h3>The Batman</h3>
         <span class="rating">⭐ 4.3</span>
@@ -46,8 +61,8 @@
 
     <!-- WONDER WOMAN -->
     <a href="wonder-woman.html" class="movie-card">
-      <img src="images/wonder-woman.webp" alt="Wonder Woman">
-      <div class="end<div class="card-info">
+      <img src="images/wonder-woman.webp" alt="Wonder Woman Movie Poster">
+      <div class="card-info">
         <h3>Wonder Woman</h3>
         <span class="rating">⭐ 4.5</span>
       </div>
@@ -60,6 +75,32 @@
 <footer class="footer">
   © 2026 MovieReviews · Independent Movie Discovery Platform
 </footer>
+
+<!-- STRUCTURED DATA : MOVIE LIST -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Latest Movie Reviews",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "url": "https://movie-reviews-six-rosy.vercel.app/avatar-2.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "url": "https://movie-reviews-six-rosy.vercel.app/the-batman.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "url": "https://movie-reviews-six-rosy.vercel.app/wonder-woman.html"
+    }
+  ]
+}
+</script>
 
 </body>
 </html>
