@@ -63,13 +63,30 @@
         James Cameron’s mastery of cinematic spectacle.
       </p>
 
-      <!-- WATCH NOW CTA -->
-      <div class="watch-actions">
-        <a href="#" class="watch-btn">▶ Watch Now</a>
-        <span class="watch-note">Available on OTT platforms</span>
-      </div>
+     <!-- WATCH TRAILER BUTTON -->
+<div class="watch-actions">
+  <button class="watch-btn" onclick="openTrailer()">
+    ▶ Watch Trailer
+  </button>
+</div>
 
-    </div>
+<!-- TRAILER MODAL -->
+<div id="trailerModal" class="trailer-modal">
+  <div class="trailer-box">
+    <span class="close-btn" onclick="closeTrailer()">×</span>
+
+    <iframe
+      id="trailerFrame"
+      width="100%"
+      height="100%"
+      src=""
+      title="Movie Trailer"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </div>
+</div>
   </section>
 
   <!-- CONTENT -->
