@@ -1,31 +1,27 @@
+/* ===============================
+   THEME.JS – FINAL STABLE VERSION
+   (Only Dark / Light Toggle)
+================================ */
+
 document.addEventListener("DOMContentLoaded", () => {
 
-  const overlay = document.querySelector(".trailer-overlay");
-  const iframe = document.querySelector(".trailer-frame");
-  const closeBtn = document.querySelector(".trailer-close");
+  const toggle = document.getElementById("themeToggle");
+  if(!toggle) return;
 
-  document.querySelectorAll("[data-trailer]").forEach(btn=>{
-    btn.addEventListener("click",()=>{
-      iframe.src = btn.dataset.trailer + "?autoplay=1";
-      overlay.classList.add("active");
-      document.body.style.overflow="hidden";
-    });
-  });
-
-  function close(){
-    overlay.classList.remove("active");
-    iframe.src="";
-    document.body.style.overflow="";
+  // Load saved theme (optional)
+  const savedTheme = localStorage.getItem("theme");
+  if(savedTheme){
+    document.documentElement.setAttribute("data-theme", savedTheme);
   }
 
-  closeBtn.onclick = close;
-  overlay.onclick = e => e.target===overlay && close();
+  toggle.addEventListener("click", () => {
+    const current =
+      document.documentElement.getAttribute("data-theme") === "dark"
+        ? "light"
+        : "dark";
 
-  // Theme toggle
-  const toggle=document.getElementById("themeToggle");
-  toggle.onclick=()=>{
-    document.documentElement.dataset.theme =
-      document.documentElement.dataset.theme==="dark" ? "light" : "dark";
-  };
+    document.documentElement.setAttribute("data-theme", current);
+    localStorage.setItem("theme", current);
+  });
 
 });
