@@ -1,26 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
   <title>Avatar: The Way of Water Review | Movie Reviews</title>
 
-  <!-- SEO -->
-  <meta name="description" content="Avatar: The Way of Water full movie review, rating, story analysis and trailer. Honest review with visuals and verdict.">
-  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Avatar The Way of Water full movie review with rating, story and trailer.">
+  <meta name="theme-color" content="#0b0b0b">
 
-  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- ===== HEADER (SAME AS HOME) ===== -->
 <header class="header">
   <div class="container header-inner">
     <div class="logo">
-      <img src="images/logo-light.webp" alt="Movie Reviews" class="logo-light">
-      <img src="images/logo-dark.webp" alt="Movie Reviews" class="logo-dark">
+      <img src="images/logo-light.webp" class="logo-light" alt="Movie Reviews">
+      <img src="images/logo-dark.webp" class="logo-dark" alt="Movie Reviews">
     </div>
 
     <nav class="nav">
@@ -29,95 +25,83 @@
       <a href="#">OTT</a>
     </nav>
 
-    <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
-      🌙
-    </button>
+    <button id="themeToggle" class="theme-toggle">🌙</button>
   </div>
 </header>
 
-<!-- ===== MOVIE HERO ===== -->
-<section class="hero">
-  <div class="container hero-inner">
-    <div class="hero-text">
+<!-- MOVIE HERO -->
+<section class="movie-hero">
+  <div class="container movie-hero-inner">
+
+    <div class="movie-poster">
+      <img src="images/avatar-2.webp" alt="Avatar The Way of Water">
+    </div>
+
+    <div class="movie-details">
       <span class="badge">Movie Review</span>
       <h1>Avatar: The Way of Water</h1>
-      <p>
-        James Cameron expands the world of Pandora with stunning underwater
-        visuals, emotional storytelling, and next-level cinematic experience.
-      </p>
 
-      <div class="movie-meta">
-        <span>⭐ Rating: <strong>4.5 / 5</strong></span><br>
-        <span>🎬 Release: 2022</span><br>
-        <span>⏱ Runtime: 192 min</span>
+      <div class="movie-chips">
+        <span>⭐ 4.5/5</span>
+        <span>⏱ 192 min</span>
+        <span>📅 2022</span>
+        <span>🎬 James Cameron</span>
       </div>
 
-      <button class="btn-primary" id="openTrailer">
-        ▶ Watch Trailer
-      </button>
+      <p class="movie-summary">
+        James Cameron returns with a visually breathtaking sequel that expands
+        Pandora’s world through emotional storytelling and spectacular underwater visuals.
+      </p>
+
+      <button class="btn-primary" id="openTrailer">▶ Watch Trailer</button>
     </div>
 
-    <div class="hero-poster">
-      <img src="images/avatar-2.webp" alt="Avatar The Way of Water Poster">
-    </div>
   </div>
 </section>
 
-<!-- ===== REVIEW CONTENT ===== -->
-<section class="movies">
+<!-- REVIEW -->
+<section class="review-section">
   <div class="container">
 
-    <h2 class="section-title">Story & Review</h2>
+    <h2>Story & Review</h2>
+    <p>
+      Avatar: The Way of Water follows Jake Sully and Neytiri as they protect
+      their family and culture from new threats. The film explores themes of
+      survival, family, and belonging.
+    </p>
 
-    <article class="review-content">
-      <p>
-        <strong>Avatar: The Way of Water</strong> follows Jake Sully and Neytiri
-        as they build a family and face new threats that force them to explore
-        the oceans of Pandora. The sequel dives deep into emotions, culture,
-        and survival.
-      </p>
+    <p>
+      Visually, the movie sets a new benchmark in cinema. The underwater motion
+      capture and world-building are unmatched. While the runtime is long,
+      the immersive experience makes it worthwhile.
+    </p>
 
-      <p>
-        Visually, the film is unmatched. The underwater motion-capture
-        technology and world-building once again set a new benchmark in
-        cinema. While the story takes its time, the emotional payoff and
-        spectacle make it worth the wait.
-      </p>
-
-      <p>
-        If you love immersive cinema experiences, Avatar 2 is a must-watch on
-        the biggest screen possible.
-      </p>
-    </article>
+    <h2>Final Verdict</h2>
+    <p>
+      A must-watch cinematic experience, especially on the biggest screen
+      possible. Avatar 2 is more emotional, more detailed, and visually stunning.
+    </p>
 
   </div>
 </section>
 
-<!-- ===== TRAILER MODAL ===== -->
+<!-- TRAILER MODAL -->
 <div class="trailer-modal" id="trailerModal">
   <div class="trailer-box">
     <button class="close-btn" id="closeTrailer">✕</button>
     <iframe
       id="trailerFrame"
       src=""
-      title="Avatar 2 Trailer"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen>
     </iframe>
   </div>
 </div>
 
-<!-- ===== FOOTER ===== -->
 <footer class="footer">
-  <div class="container footer-inner">
-    <p>© 2026 Movie Reviews. All rights reserved.</p>
-  </div>
+  <p>© 2026 Movie Reviews. All rights reserved.</p>
 </footer>
 
-<!-- JS -->
 <script src="theme.js"></script>
-
 <script>
   const openBtn = document.getElementById("openTrailer");
   const closeBtn = document.getElementById("closeTrailer");
