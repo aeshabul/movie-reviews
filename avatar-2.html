@@ -6,6 +6,13 @@
 <title>Avatar: The Way of Water – Movie Review</title>
 
 <link rel="stylesheet" href="style.css">
+
+<style>
+/* SAFETY: button clickable */
+#openTrailer{
+  pointer-events:auto;
+}
+</style>
 </head>
 
 <body>
@@ -16,40 +23,32 @@
       <img src="images/logo-light.webp" class="logo-light">
       <img src="images/logo-dark.webp" class="logo-dark">
     </div>
-
     <button id="themeToggle" class="theme-toggle">🌙</button>
   </div>
 </header>
 
-<!-- HERO -->
 <section class="movie-hero">
   <img src="images/avatar-2.webp" alt="Avatar 2">
 </section>
 
-<!-- CONTENT -->
 <section class="container">
   <span class="badge">Movie Review</span>
   <h1>Avatar: The Way of Water</h1>
 
-  <div class="movie-meta">
-    ⭐ 4.5/5 • ⏱ 192 min • 📅 2022
-  </div>
-
   <p class="movie-desc">
-    James Cameron returns with a visually stunning sequel that expands Pandora’s
-    world with breathtaking underwater visuals.
+    James Cameron returns with a visually stunning sequel.
   </p>
 
-  <!-- 🔥 WORKING BUTTON -->
-  <button class="btn-primary" id="openTrailer">
+  <!-- 🔥 DIRECT HTML CALL (NO JS DEPENDENCY) -->
+  <button class="btn-primary" id="openTrailer" onclick="openTrailer()">
     ▶ Watch Trailer
   </button>
 </section>
 
-<!-- 🎬 TRAILER POPUP -->
+<!-- TRAILER POPUP -->
 <div class="trailer-overlay" id="trailerOverlay">
   <div class="trailer-box">
-    <button class="close-btn" id="closeTrailer">✕</button>
+    <button class="close-btn" onclick="closeTrailer()">✕</button>
 
     <iframe
       id="trailerFrame"
@@ -61,34 +60,28 @@
 
 <script>
 /* ===============================
-   TRAILER POPUP – FINAL WORKING
+   FORCE WORKING FUNCTIONS
 ================================ */
 
-const YOUTUBE_EMBED_LINK =
-  "https://www.youtube.com/embed/o5F8MOz_IDw"; // 👈 CHANGE VIDEO ID ONLY
+function openTrailer(){
+  const overlay = document.getElementById("trailerOverlay");
+  const frame = document.getElementById("trailerFrame");
 
-const openBtn   = document.getElementById("openTrailer");
-const closeBtn  = document.getElementById("closeTrailer");
-const overlay   = document.getElementById("trailerOverlay");
-const frame     = document.getElementById("trailerFrame");
-
-openBtn.addEventListener("click", () => {
-  frame.src = YOUTUBE_EMBED_LINK + "?autoplay=1&rel=0";
+  frame.src = "https://www.youtube.com/embed/o5F8MOz_IDw?autoplay=1&rel=0";
   overlay.classList.add("active");
   document.body.style.overflow = "hidden";
-});
+
+  console.log("Trailer OPENED"); // DEBUG
+}
 
 function closeTrailer(){
+  const overlay = document.getElementById("trailerOverlay");
+  const frame = document.getElementById("trailerFrame");
+
   overlay.classList.remove("active");
   frame.src = "";
   document.body.style.overflow = "";
 }
-
-closeBtn.addEventListener("click", closeTrailer);
-
-overlay.addEventListener("click", e => {
-  if(e.target === overlay) closeTrailer();
-});
 </script>
 
 <script src="theme.js"></script>
