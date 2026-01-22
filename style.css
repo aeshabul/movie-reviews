@@ -54,7 +54,7 @@ body {
 }
 
 .logo img {
-  height: 36px;
+  height: 34px;
 }
 
 .logo-dark { display: none; }
@@ -62,10 +62,11 @@ body {
 [data-theme="dark"] .logo-dark { display: block; }
 
 .nav a {
-  margin: 0 12px;
+  margin: 0 10px;
   text-decoration: none;
   color: var(--text);
   font-weight: 500;
+  font-size: 14px;
 }
 
 .nav a.active {
@@ -82,13 +83,13 @@ body {
 
 /* HERO */
 .hero {
-  padding: 64px 0;
+  padding: 56px 0;
 }
 
 .hero-inner {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
-  gap: 40px;
+  gap: 36px;
   align-items: center;
 }
 
@@ -99,18 +100,18 @@ body {
   border-radius: 999px;
   font-size: 12px;
   display: inline-block;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
 .hero h1 {
-  font-size: 38px;
-  margin-bottom: 12px;
+  font-size: 36px;
+  margin-bottom: 10px;
 }
 
 .hero p {
   color: var(--muted);
-  margin-bottom: 22px;
-  line-height: 1.6;
+  margin-bottom: 20px;
+  line-height: 1.65;
 }
 
 .btn-primary {
@@ -125,23 +126,23 @@ body {
 .hero-poster img {
   width: 100%;
   border-radius: 22px;
-  box-shadow: 0 20px 60px rgba(0,0,0,.5);
+  box-shadow: 0 18px 50px rgba(0,0,0,.45);
 }
 
 /* MOVIES */
 .movies {
-  padding: 40px 0;
+  padding: 36px 0;
 }
 
 .section-title {
   font-size: 22px;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .movie-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 18px;
 }
 
 .movie-card {
@@ -156,12 +157,12 @@ body {
 
 .movie-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 15px 40px rgba(0,0,0,.4);
+  box-shadow: 0 14px 36px rgba(0,0,0,.35);
 }
 
 .movie-card img {
   width: 100%;
-  height: 280px;
+  height: 260px;
   object-fit: cover;
 }
 
@@ -170,7 +171,7 @@ body {
 }
 
 .movie-info h3 {
-  font-size: 16px;
+  font-size: 15px;
   margin-bottom: 6px;
 }
 
@@ -183,18 +184,40 @@ body {
 .footer {
   border-top: 1px solid var(--border);
   text-align: center;
-  padding: 24px 0;
+  padding: 22px 0;
   color: var(--muted);
   font-size: 14px;
 }
 
-/* MOBILE */
+/* MOBILE POLISH */
 @media (max-width: 768px) {
   .hero-inner {
     grid-template-columns: 1fr;
   }
 
+  .hero {
+    padding: 36px 0;
+  }
+
   .hero h1 {
-    font-size: 28px;
+    font-size: 26px;
+    line-height: 1.25;
+  }
+
+  .hero p {
+    font-size: 15px;
+  }
+
+  .hero-poster {
+    order: -1;
+  }
+
+  .movie-card img {
+    height: 220px;
+  }
+
+  .nav a {
+    margin: 0 6px;
+    font-size: 13px;
   }
 }
