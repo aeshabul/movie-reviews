@@ -4,17 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Movie Reviews – Honest Movie Reviews</title>
-
   <meta name="description" content="Latest Hollywood & OTT movie reviews with ratings and trailers.">
   <meta name="theme-color" content="#0b0b0b">
-
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="header">
+<header class="header glass">
   <div class="container header-inner">
-    <div class="logo">
+    <div class="logo-wrap">
       <img src="images/logo-light.webp" class="logo-light" alt="Movie Reviews">
       <img src="images/logo-dark.webp" class="logo-dark" alt="Movie Reviews">
     </div>
@@ -25,14 +23,15 @@
       <a href="#">OTT</a>
     </nav>
 
-    <button id="themeToggle" class="theme-toggle">🌙</button>
+    <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+      <span class="icon-sun">☀️</span>
+      <span class="icon-moon">🌙</span>
+    </button>
   </div>
 </header>
 
-<!-- HERO -->
 <section class="hero">
   <div class="container hero-inner">
-
     <div class="hero-text">
       <span class="badge">Featured Review</span>
       <h1>Avatar: The Way of Water</h1>
@@ -42,45 +41,28 @@
       </p>
       <a href="avatar-2.html" class="btn-primary">Read Full Review</a>
     </div>
-
     <div class="hero-poster">
       <img src="images/avatar-2.webp" alt="Avatar 2 Poster">
     </div>
-
   </div>
 </section>
 
-<!-- LATEST -->
 <section class="movies">
   <div class="container">
     <h2 class="section-title">Latest Reviews</h2>
-
     <div class="movie-grid">
-
       <a href="the-batman.html" class="movie-card">
         <img src="images/the-batman.webp" alt="The Batman">
-        <div class="movie-info">
-          <h3>The Batman</h3>
-          <span class="rating">★★★★☆</span>
-        </div>
+        <div class="movie-info"><h3>The Batman</h3><span class="rating">★★★★☆</span></div>
       </a>
-
       <a href="wonder-woman.html" class="movie-card">
         <img src="images/wonder-woman.webp" alt="Wonder Woman">
-        <div class="movie-info">
-          <h3>Wonder Woman</h3>
-          <span class="rating">★★★★☆</span>
-        </div>
+        <div class="movie-info"><h3>Wonder Woman</h3><span class="rating">★★★★☆</span></div>
       </a>
-
       <a href="avatar-2.html" class="movie-card">
         <img src="images/avatar-2.webp" alt="Avatar 2">
-        <div class="movie-info">
-          <h3>Avatar 2</h3>
-          <span class="rating">★★★★★</span>
-        </div>
+        <div class="movie-info"><h3>Avatar 2</h3><span class="rating">★★★★★</span></div>
       </a>
-
     </div>
   </div>
 </section>
