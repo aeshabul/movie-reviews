@@ -1,174 +1,91 @@
-:root{
-  --bg:#ffffff;
-  --text:#111;
-  --muted:#666;
-  --card:#fff;
-  --border:#e5e7eb;
-  --primary:#fbbf24;
-  --header:#ffffff;
-}
-
-[data-theme="dark"]{
-  --bg:#0b0b0b;
-  --text:#eaeaea;
-  --muted:#9ca3af;
-  --card:#111;
-  --border:#1f2937;
-  --primary:#fbbf24;
-  --header:#0b0b0b;
-}
-
-*{margin:0;padding:0;box-sizing:border-box}
-
-body{
-  background:var(--bg);
-  color:var(--text);
-  font-family:system-ui, sans-serif;
-}
-
-/* LAYOUT */
-.container{
-  max-width:1200px;
-  margin:auto;
-  padding:0 16px;
-}
-
-/* HEADER */
-.header{
-  position:sticky;
-  top:0;
-  z-index:100;
-  background:var(--header);
-  border-bottom:1px solid var(--border);
-}
-
-.header-inner{
-  height:64px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-}
-
-.logo img{height:32px}
-.logo-dark{display:none}
-[data-theme="dark"] .logo-light{display:none}
-[data-theme="dark"] .logo-dark{display:block}
-
-.nav a{
-  margin:0 10px;
-  text-decoration:none;
-  color:var(--text);
-  font-weight:500;
-}
-.nav a.active{color:var(--primary)}
-
-.theme-toggle{
-  background:none;
-  border:1px solid var(--border);
-  border-radius:8px;
-  padding:6px 10px;
-}
-
 /* =====================
-   HOME PAGE POLISH
+   PREMIUM HOME CARDS
 ===================== */
 
-.home-page .hero{
-  padding:64px 0 56px;
-  background:
-    radial-gradient(600px 300px at 10% 10%, rgba(251,191,36,.15), transparent 60%),
-    radial-gradient(500px 300px at 90% 20%, rgba(251,191,36,.08), transparent 60%);
-}
-
-.home-page .hero-inner{
+.home-page .movie-grid{
   display:grid;
-  grid-template-columns:1.25fr .75fr;
-  gap:40px;
-  align-items:center;
+  grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+  gap:22px;
 }
 
-.badge-polish{
-  background:linear-gradient(135deg,#fbbf24,#f59e0b);
-  color:#000;
-  font-weight:600;
+.home-page .movie-card{
+  background:linear-gradient(
+    180deg,
+    rgba(255,255,255,0.03),
+    rgba(0,0,0,0.2)
+  );
+  border-radius:18px;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,0.08);
+  text-decoration:none;
+  color:inherit;
+  position:relative;
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease,
+    border .25s ease;
 }
 
-.home-page .hero h1{
-  font-size:38px;
-  margin-bottom:12px;
-}
-
-.home-page .hero p{
-  max-width:520px;
-  color:var(--muted);
-  line-height:1.7;
-  margin-bottom:22px;
-}
-
-.btn-polish{
-  padding:14px 26px;
-  border-radius:16px;
-  box-shadow:0 10px 30px rgba(251,191,36,.25);
-}
-
-.home-page .hero-poster img{
-  width:100%;
-  max-width:420px;
-  margin:auto;
-  display:block;
-  border-radius:20px;
-}
-
-/* MOVIES */
-.home-page .movies{padding:40px 0}
-
-.home-page .section-title{
-  font-size:22px;
-  margin-bottom:20px;
-}
-
-.movie-polish{
-  transition:transform .2s ease, box-shadow .2s ease;
-}
-
-.movie-polish:hover{
-  transform:translateY(-4px);
-  box-shadow:0 12px 30px rgba(0,0,0,.35);
-}
-
+/* Poster */
 .home-page .movie-card img{
-  height:250px;
+  width:100%;
+  height:260px;
   object-fit:cover;
+  display:block;
+}
+
+/* Gradient overlay */
+.home-page .movie-card::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    to top,
+    rgba(0,0,0,.85),
+    rgba(0,0,0,.15) 55%,
+    transparent
+  );
+  opacity:.85;
+  pointer-events:none;
+}
+
+/* Info */
+.home-page .movie-info{
+  position:absolute;
+  bottom:0;
+  left:0;
+  right:0;
+  padding:14px 14px 16px;
+  z-index:2;
 }
 
 .home-page .movie-info h3{
   font-size:15px;
+  font-weight:600;
+  margin-bottom:6px;
+  line-height:1.2;
 }
 
-/* FOOTER */
-.footer{
-  border-top:1px solid var(--border);
-  padding:22px;
-  text-align:center;
+.home-page .rating{
+  color:var(--primary);
   font-size:14px;
-  color:var(--muted);
+  letter-spacing:1px;
 }
 
-/* MOBILE */
+/* Hover (desktop only) */
+@media(hover:hover){
+  .home-page .movie-card:hover{
+    transform:translateY(-6px) scale(1.01);
+    box-shadow:
+      0 20px 40px rgba(0,0,0,.55),
+      0 0 0 1px rgba(251,191,36,.25);
+    border:1px solid rgba(251,191,36,.35);
+  }
+}
+
+/* Mobile refinement */
 @media(max-width:768px){
-  .home-page .hero-inner{
-    grid-template-columns:1fr;
-  }
-
-  .home-page .hero{
-    padding:48px 0;
-  }
-
-  .home-page .hero h1{
-    font-size:26px;
-  }
-
-  .home-page .hero-poster img{
-    max-width:300px;
+  .home-page .movie-card img{
+    height:240px;
   }
 }
