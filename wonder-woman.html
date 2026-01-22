@@ -1,26 +1,20 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-  <title>Wonder Woman Review | Movie Reviews</title>
-
-  <!-- SEO -->
-  <meta name="description" content="Wonder Woman (2017) full movie review, rating, story analysis and trailer. A powerful superhero origin story review.">
-  <meta name="theme-color" content="#ffffff">
-
-  <!-- CSS -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wonder Woman – Movie Review</title>
+  <meta name="theme-color" content="#0b0b0b">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
-<!-- ===== HEADER ===== -->
+<body class="movie-page">
+
 <header class="header">
   <div class="container header-inner">
     <div class="logo">
-      <img src="images/logo-light.webp" alt="Movie Reviews" class="logo-light">
-      <img src="images/logo-dark.webp" alt="Movie Reviews" class="logo-dark">
+      <img src="images/logo-light.webp" class="logo-light" alt="Movie Reviews">
+      <img src="images/logo-dark.webp" class="logo-dark" alt="Movie Reviews">
     </div>
 
     <nav class="nav">
@@ -29,123 +23,55 @@
       <a href="#">OTT</a>
     </nav>
 
-    <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
-      🌙
-    </button>
+    <button id="themeToggle" class="theme-toggle">🌙</button>
   </div>
 </header>
 
-<!-- ===== MOVIE HERO ===== -->
-<section class="hero">
-  <div class="container hero-inner">
+<!-- MOVIE HERO -->
+<section class="movie-hero">
+  <div class="container movie-hero-inner">
 
-    <div class="hero-text">
+    <div class="movie-poster">
+      <img src="images/wonder-woman.webp" alt="Wonder Woman">
+    </div>
+
+    <div class="movie-details">
       <span class="badge">Movie Review</span>
+      <h1>Wonder Woman</h1>
 
-      <h1>Wonder Woman (2017)</h1>
-
-      <p>
-        A powerful origin story that introduces Diana of Themyscira as a brave
-        warrior who steps into the world of men to stop a global war.
-      </p>
-
-      <div class="movie-meta">
-        <span>⭐ Rating: <strong>4 / 5</strong></span><br>
-        <span>🎬 Release: 2017</span><br>
-        <span>⏱ Runtime: 141 min</span>
+      <div class="meta">
+        ⭐ 4/5 • ⏱ 141 min • 📅 2017 • 🎬 Patty Jenkins
       </div>
 
-      <button class="btn-primary" id="openTrailer">
-        ▶ Watch Trailer
-      </button>
-    </div>
+      <p class="summary">
+        Wonder Woman tells the origin story of Diana, an Amazonian warrior
+        who leaves her island home to stop a devastating war, discovering
+        her true powers along the way.
+      </p>
 
-    <div class="hero-poster">
-      <img src="images/wonder-woman.webp" alt="Wonder Woman Poster">
+      <a href="#" class="btn-primary">▶ Watch Trailer</a>
     </div>
 
   </div>
 </section>
 
-<!-- ===== REVIEW CONTENT ===== -->
-<section class="movies">
+<!-- STORY -->
+<section class="movie-content">
   <div class="container">
-
-    <h2 class="section-title">Story & Review</h2>
-
-    <article class="review-content">
-      <p>
-        <strong>Wonder Woman</strong> follows Diana, an Amazonian princess who
-        leaves her hidden island home after an American pilot crashes nearby
-        and tells her about a massive war raging across the world.
-      </p>
-
-      <p>
-        Gal Gadot shines as Wonder Woman, bringing strength, compassion and
-        grace to the role. The film balances action, emotion and humor while
-        delivering a strong message about humanity.
-      </p>
-
-      <p>
-        The first half of the movie is especially strong, though the climax
-        feels slightly weaker compared to the buildup.
-      </p>
-    </article>
-
-    <h2 class="section-title">Final Verdict</h2>
-
-    <article class="review-content">
-      <p>
-        Wonder Woman is one of DC’s strongest superhero films. It delivers an
-        inspiring origin story with memorable action scenes and a powerful
-        lead performance.
-      </p>
-    </article>
-
+    <h2>Story & Review</h2>
+    <p>
+      Set during World War I, Wonder Woman combines action, mythology, and
+      emotion to deliver one of DC’s strongest standalone films. Gal Gadot’s
+      performance brings strength and compassion to the character, making
+      the film both empowering and entertaining.
+    </p>
   </div>
 </section>
 
-<!-- ===== TRAILER MODAL ===== -->
-<div class="trailer-modal" id="trailerModal">
-  <div class="trailer-box">
-    <button class="close-btn" id="closeTrailer">✕</button>
-    <iframe
-      id="trailerFrame"
-      src=""
-      title="Wonder Woman Trailer"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen>
-    </iframe>
-  </div>
-</div>
-
-<!-- ===== FOOTER ===== -->
 <footer class="footer">
-  <div class="container footer-inner">
-    <p>© 2026 Movie Reviews. All rights reserved.</p>
-  </div>
+  © 2026 Movie Reviews. All rights reserved.
 </footer>
 
-<!-- JS -->
 <script src="theme.js"></script>
-
-<script>
-  const openBtn = document.getElementById("openTrailer");
-  const closeBtn = document.getElementById("closeTrailer");
-  const modal = document.getElementById("trailerModal");
-  const frame = document.getElementById("trailerFrame");
-
-  openBtn.onclick = () => {
-    frame.src = "https://www.youtube.com/embed/1Q8fG0TtVAY";
-    modal.style.display = "flex";
-  };
-
-  closeBtn.onclick = () => {
-    modal.style.display = "none";
-    frame.src = "";
-  };
-</script>
-
 </body>
 </html>
