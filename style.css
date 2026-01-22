@@ -154,18 +154,51 @@ body{
   color:var(--muted);
 }
 
-/* MOBILE FIX */
+/* =========================
+   HOME PAGE ONLY STYLES
+========================= */
+
+.home-page .hero{
+  padding:48px 0;
+}
+
+.home-page .hero-inner{
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:32px;
+  align-items:center;
+}
+
+.home-page .hero-poster img{
+  width:100%;
+  max-width:380px;
+  margin:auto;
+  display:block;
+  border-radius:18px;
+}
+
+/* Mobile */
 @media(max-width:768px){
-  .hero-inner{
+  .home-page .hero-inner{
     grid-template-columns:1fr;
   }
-  .hero h1{
-    font-size:26px;
-  }
-  .hero-poster img{
+
+  .home-page .hero-poster img{
     max-width:300px;
   }
-  .movie-card img{
-    height:220px;
-  }
+}
+
+/* =========================
+   HOME MOVIE CARDS ONLY
+========================= */
+
+.home-page .movie-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:18px;
+}
+
+.home-page .movie-card img{
+  height:240px;
+  object-fit:cover;
 }
