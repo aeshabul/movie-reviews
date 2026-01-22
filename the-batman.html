@@ -1,26 +1,20 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-  <title>The Batman Review | Movie Reviews</title>
-
-  <!-- SEO -->
-  <meta name="description" content="The Batman (2022) full movie review, rating, story analysis and trailer. Dark, gritty and realistic Batman reboot review.">
-  <meta name="theme-color" content="#ffffff">
-
-  <!-- CSS -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Batman (2022) – Movie Review</title>
+  <meta name="theme-color" content="#0b0b0b">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
-<!-- ===== HEADER ===== -->
+<body class="movie-page">
+
 <header class="header">
   <div class="container header-inner">
     <div class="logo">
-      <img src="images/logo-light.webp" alt="Movie Reviews" class="logo-light">
-      <img src="images/logo-dark.webp" alt="Movie Reviews" class="logo-dark">
+      <img src="images/logo-light.webp" class="logo-light" alt="Movie Reviews">
+      <img src="images/logo-dark.webp" class="logo-dark" alt="Movie Reviews">
     </div>
 
     <nav class="nav">
@@ -29,123 +23,56 @@
       <a href="#">OTT</a>
     </nav>
 
-    <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
-      🌙
-    </button>
+    <button id="themeToggle" class="theme-toggle">🌙</button>
   </div>
 </header>
 
-<!-- ===== MOVIE HERO ===== -->
-<section class="hero">
-  <div class="container hero-inner">
+<!-- MOVIE HERO -->
+<section class="movie-hero">
+  <div class="container movie-hero-inner">
 
-    <div class="hero-text">
+    <div class="movie-poster">
+      <img src="images/the-batman.webp" alt="The Batman 2022">
+    </div>
+
+    <div class="movie-details">
       <span class="badge">Movie Review</span>
-
       <h1>The Batman (2022)</h1>
 
-      <p>
-        Matt Reeves presents a darker, detective-style Batman that focuses on
-        crime, corruption and psychological depth rather than flashy action.
-      </p>
-
-      <div class="movie-meta">
-        <span>⭐ Rating: <strong>4 / 5</strong></span><br>
-        <span>🎬 Release: 2022</span><br>
-        <span>⏱ Runtime: 176 min</span>
+      <div class="meta">
+        ⭐ 4/5 • ⏱ 176 min • 📅 2022 • 🎬 Matt Reeves
       </div>
 
-      <button class="btn-primary" id="openTrailer">
-        ▶ Watch Trailer
-      </button>
-    </div>
+      <p class="summary">
+        The Batman presents a darker, detective-style take on Gotham’s
+        vigilante, focusing on crime, corruption, and psychological depth
+        rather than flashy action.
+      </p>
 
-    <div class="hero-poster">
-      <img src="images/the-batman.webp" alt="The Batman Poster">
+      <a href="#" class="btn-primary">▶ Watch Trailer</a>
     </div>
 
   </div>
 </section>
 
-<!-- ===== REVIEW CONTENT ===== -->
-<section class="movies">
+<!-- STORY -->
+<section class="movie-content">
   <div class="container">
-
-    <h2 class="section-title">Story & Review</h2>
-
-    <article class="review-content">
-      <p>
-        <strong>The Batman</strong> follows Bruce Wayne in his second year as
-        Gotham’s vigilante, where he investigates a series of murders linked
-        to deep-rooted corruption in the city.
-      </p>
-
-      <p>
-        Robert Pattinson delivers a brooding and grounded performance, while
-        Gotham City feels grim, realistic and dangerous. The detective angle
-        sets this film apart from previous Batman movies.
-      </p>
-
-      <p>
-        The film is slow-paced at times, but the atmosphere, cinematography and
-        music keep the tension alive throughout.
-      </p>
-    </article>
-
-    <h2 class="section-title">Final Verdict</h2>
-
-    <article class="review-content">
-      <p>
-        The Batman is not a typical superhero movie. It’s dark, serious and
-        character-driven. If you enjoy noir-style storytelling and realistic
-        comic book adaptations, this is a must-watch.
-      </p>
-    </article>
-
+    <h2>Story & Review</h2>
+    <p>
+      Set in Batman’s second year of crime-fighting, the film follows Bruce
+      Wayne as he uncovers deep corruption in Gotham City while facing the
+      Riddler, a serial killer targeting the city’s elite. With a noir tone,
+      strong performances, and atmospheric visuals, The Batman delivers a
+      grounded and intense cinematic experience.
+    </p>
   </div>
 </section>
 
-<!-- ===== TRAILER MODAL ===== -->
-<div class="trailer-modal" id="trailerModal">
-  <div class="trailer-box">
-    <button class="close-btn" id="closeTrailer">✕</button>
-    <iframe
-      id="trailerFrame"
-      src=""
-      title="The Batman Trailer"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen>
-    </iframe>
-  </div>
-</div>
-
-<!-- ===== FOOTER ===== -->
 <footer class="footer">
-  <div class="container footer-inner">
-    <p>© 2026 Movie Reviews. All rights reserved.</p>
-  </div>
+  © 2026 Movie Reviews. All rights reserved.
 </footer>
 
-<!-- JS -->
 <script src="theme.js"></script>
-
-<script>
-  const openBtn = document.getElementById("openTrailer");
-  const closeBtn = document.getElementById("closeTrailer");
-  const modal = document.getElementById("trailerModal");
-  const frame = document.getElementById("trailerFrame");
-
-  openBtn.onclick = () => {
-    frame.src = "https://www.youtube.com/embed/mqqft2x_Aa4";
-    modal.style.display = "flex";
-  };
-
-  closeBtn.onclick = () => {
-    modal.style.display = "none";
-    frame.src = "";
-  };
-</script>
-
 </body>
 </html>
