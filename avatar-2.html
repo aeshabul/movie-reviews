@@ -6,43 +6,47 @@
 <title>Avatar: The Way of Water – Movie Review</title>
 
 <style>
+/* ===== BASIC RESET ===== */
+*{margin:0;padding:0;box-sizing:border-box}
 body{
-  margin:0;
-  font-family:system-ui;
+  font-family:system-ui,-apple-system;
   background:#0b0b0b;
   color:#fff;
 }
 
-/* HEADER */
+/* ===== HEADER ===== */
 .header{
   background:#000;
   padding:12px 16px;
   display:flex;
-  justify-content:space-between;
   align-items:center;
+  gap:12px;
 }
 .header img{height:36px}
 
-/* HERO */
+/* ===== HERO IMAGE ===== */
 .hero img{
   width:100%;
   max-height:80vh;
   object-fit:cover;
 }
 
-/* CONTENT */
-.container{padding:20px}
+/* ===== CONTENT ===== */
+.container{
+  padding:20px;
+}
 .btn{
   background:#fbbf24;
   color:#000;
-  padding:14px 22px;
+  padding:14px 24px;
   border-radius:30px;
   border:none;
   font-weight:600;
   cursor:pointer;
+  font-size:15px;
 }
 
-/* TRAILER POPUP */
+/* ===== TRAILER POPUP ===== */
 .trailer-overlay{
   position:fixed;
   inset:0;
@@ -52,7 +56,9 @@ body{
   justify-content:center;
   z-index:9999;
 }
-.trailer-overlay.show{display:flex}
+.trailer-overlay.show{
+  display:flex;
+}
 
 .trailer-box{
   width:90%;
@@ -60,20 +66,22 @@ body{
   aspect-ratio:16/9;
   position:relative;
 }
+
 .trailer-box iframe{
   width:100%;
   height:100%;
   border:0;
   border-radius:12px;
 }
-.close{
+
+.close-btn{
   position:absolute;
   top:-45px;
   right:0;
-  font-size:28px;
-  color:#fff;
   background:none;
   border:none;
+  color:#fff;
+  font-size:28px;
   cursor:pointer;
 }
 </style>
@@ -81,62 +89,74 @@ body{
 
 <body>
 
-<!-- HEADER -->
+<!-- ===== HEADER ===== -->
 <div class="header">
-  <img src="images/logo-dark.webp">
-  <span>Movie Reviews</span>
+  <img src="images/logo-dark.webp" alt="Movie Reviews">
+  <strong>Movie Reviews</strong>
 </div>
 
-<!-- HERO -->
+<!-- ===== HERO ===== -->
 <div class="hero">
-  <img src="images/avatar-2.webp">
+  <img src="images/avatar-2.webp" alt="Avatar 2">
 </div>
 
-<!-- CONTENT -->
+<!-- ===== CONTENT ===== -->
 <div class="container">
   <h1>Avatar: The Way of Water</h1>
-  <p>James Cameron returns with a visually stunning sequel.</p>
+  <p style="margin:12px 0 20px;color:#ccc">
+    James Cameron returns with a visually stunning sequel.
+  </p>
 
-  <!-- 🔥 BUTTON -->
-  <button class="btn" id="openTrailer">▶ Watch Trailer</button>
+  <!-- 🔥 ONLY THIS LINK YOU WILL CHANGE -->
+  <button class="btn" id="openTrailer">
+    ▶ Watch Trailer
+  </button>
 </div>
 
-<!-- TRAILER POPUP -->
-<div class="trailer-overlay" id="trailer">
+<!-- ===== TRAILER POPUP ===== -->
+<div class="trailer-overlay" id="trailerOverlay">
   <div class="trailer-box">
-    <button class="close" id="closeTrailer">✕</button>
+    <button class="close-btn" id="closeTrailer">✕</button>
+
+    <!-- 👇 YOUTUBE EMBED LOADS HERE -->
     <iframe
       id="trailerFrame"
-      allow="autoplay; encrypted-media"
+      src=""
+      allow="autoplay; encrypted-media; fullscreen"
       allowfullscreen>
     </iframe>
   </div>
 </div>
 
 <script>
-/* 🔥 GUARANTEED JS */
-document.getElementById("openTrailer").onclick = function(){
-  const overlay = document.getElementById("trailer");
-  const frame = document.getElementById("trailerFrame");
+/* ===================================
+   🔥 YOU ONLY CHANGE THIS LINK BELOW
+=================================== */
+const YOUTUBE_EMBED_LINK =
+  "https://www.youtube.com/embed/o5F8MOz_IDw"; // 👈 CHANGE ONLY THIS
 
-  frame.src = "https://www.youtube.com/embed/o5F8MOz_IDw?si=p7I-8TYymNGECOue";
+/* ===== JS (DO NOT TOUCH) ===== */
+const openBtn = document.getElementById("openTrailer");
+const closeBtn = document.getElementById("closeTrailer");
+const overlay = document.getElementById("trailerOverlay");
+const frame = document.getElementById("trailerFrame");
+
+openBtn.onclick = () => {
+  frame.src = YOUTUBE_EMBED_LINK + "?autoplay=1&rel=0";
   overlay.classList.add("show");
+  document.body.style.overflow = "hidden";
 };
 
-document.getElementById("closeTrailer").onclick = function(){
-  const overlay = document.getElementById("trailer");
-  const frame = document.getElementById("trailerFrame");
+closeBtn.onclick = closeTrailer;
+overlay.onclick = (e) => {
+  if(e.target === overlay) closeTrailer();
+};
 
+function closeTrailer(){
   frame.src = "";
   overlay.classList.remove("show");
-};
-
-document.getElementById("trailer").onclick = function(e){
-  if(e.target === this){
-    document.getElementById("trailerFrame").src="";
-    this.classList.remove("show");
-  }
-};
+  document.body.style.overflow = "";
+}
 </script>
 
 </body>
