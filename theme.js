@@ -1,18 +1,31 @@
-const toggle = document.getElementById("themeToggle");
-const root = document.documentElement;
+// TRAILER POPUP
+document.addEventListener("DOMContentLoaded", () => {
+  const buttons = document.querySelectorAll("[data-trailer]");
+  const overlay = document.querySelector(".trailer-overlay");
+  const iframe = document.querySelector(".trailer-frame");
+  const closeBtn = document.querySelector(".trailer-close");
 
-const savedTheme = localStorage.getItem("theme");
-const systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const url = btn.getAttribute("data-trailer");
+      iframe.src = url + "?autoplay=1";
+      overlay.classList.add("active");
+      document.body.style.overflow = "hidden";
+    });
+  });
 
-if (savedTheme) {
-  root.setAttribute("data-theme", savedTheme);
-} else if (systemDark) {
-  root.setAttribute("data-theme", "dark");
-}
+  const closeTrailer = () => {
+    overlay.classList.remove("active");
+    iframe.src = "";
+    document.body.style.overflow = "";
+  };
 
-toggle.addEventListener("click", () => {
-  const current = root.getAttribute("data-theme");
-  const next = current === "dark" ? "light" : "dark";
-  root.setAttribute("data-theme", next);
-  localStorage.setItem("theme", next);
+  closeBtn.addEventListener("click", closeTrailer);
+  overlay.addEventListener("click", e => {
+    if(e.target === overlay) closeTrailer();
+  });
+
+  document.addEventListener("keydown", e => {
+    if(e.key === "Escape") closeTrailer();
+  });
 });
