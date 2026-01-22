@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Movie Reviews – Honest Movie Reviews</title>
-  <meta name="description" content="Latest Hollywood & OTT movie reviews with ratings and trailers.">
-  <meta name="theme-color" content="#0b0b0b">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Movie Reviews</title>
+<meta name="theme-color" content="#0b0b0b">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="header glass">
+<header class="header">
   <div class="container header-inner">
-    <div class="logo-wrap">
+    <div class="logo">
       <img src="images/logo-light.webp" class="logo-light" alt="Movie Reviews">
       <img src="images/logo-dark.webp" class="logo-dark" alt="Movie Reviews">
     </div>
@@ -23,16 +22,14 @@
       <a href="#">OTT</a>
     </nav>
 
-    <button id="themeToggle" class="theme-toggle">
-      <span class="icon-sun">☀️</span>
-      <span class="icon-moon">🌙</span>
-    </button>
+    <button id="themeToggle" class="theme-toggle">🌙</button>
   </div>
 </header>
 
 <!-- HERO -->
 <section class="hero">
   <div class="container hero-inner">
+
     <div class="hero-text">
       <span class="badge">Featured Review</span>
       <h1>Avatar: The Way of Water</h1>
@@ -44,42 +41,40 @@
     </div>
 
     <div class="hero-poster">
-      <img src="images/avatar-2.webp" alt="Avatar 2 Poster">
+      <img src="images/avatar-2.webp" alt="Avatar 2">
     </div>
+
   </div>
 </section>
 
-<!-- LATEST REVIEWS -->
+<!-- LATEST -->
 <section class="movies">
   <div class="container">
     <h2 class="section-title">Latest Reviews</h2>
 
-    <div class="movie-grid netflix">
+    <div class="movie-grid">
 
-      <a href="the-batman.html" class="movie-card netflix-card">
+      <a href="the-batman.html" class="movie-card">
         <img src="images/the-batman.webp" alt="The Batman">
-        <div class="card-overlay">
+        <div class="movie-info">
           <h3>The Batman</h3>
           <span class="rating">★★★★☆</span>
-          <span class="cta">View Review</span>
         </div>
       </a>
 
-      <a href="wonder-woman.html" class="movie-card netflix-card">
+      <a href="wonder-woman.html" class="movie-card">
         <img src="images/wonder-woman.webp" alt="Wonder Woman">
-        <div class="card-overlay">
+        <div class="movie-info">
           <h3>Wonder Woman</h3>
           <span class="rating">★★★★☆</span>
-          <span class="cta">View Review</span>
         </div>
       </a>
 
-      <a href="avatar-2.html" class="movie-card netflix-card">
+      <a href="avatar-2.html" class="movie-card">
         <img src="images/avatar-2.webp" alt="Avatar 2">
-        <div class="card-overlay">
+        <div class="movie-info">
           <h3>Avatar 2</h3>
           <span class="rating">★★★★★</span>
-          <span class="cta">View Review</span>
         </div>
       </a>
 
@@ -88,7 +83,7 @@
 </section>
 
 <footer class="footer">
-  <p>© 2026 Movie Reviews. All rights reserved.</p>
+  © 2026 Movie Reviews. All rights reserved.
 </footer>
 
 <script src="theme.js"></script>
