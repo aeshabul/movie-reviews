@@ -4,12 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Avatar: The Way of Water – Movie Review</title>
-  <meta name="theme-color" content="#0b0b0b">
+
   <link rel="stylesheet" href="style.css">
+  <script defer src="theme.js"></script>
 </head>
 
-<body class="movie-page">
+<body>
 
+<!-- ================= HEADER ================= -->
 <header class="header">
   <div class="container header-inner">
 
@@ -25,60 +27,56 @@
     </nav>
 
     <button id="themeToggle" class="theme-toggle">🌙</button>
+
   </div>
 </header>
 
-<!-- MOVIE HERO -->
+<!-- ================= HERO POSTER ================= -->
 <section class="movie-hero">
-  <div class="container movie-hero-inner">
-
-    <div class="movie-poster">
-      <img src="images/avatar-2.webp" alt="Avatar The Way of Water">
-    </div>
-
-    <div class="movie-details">
-      <span class="badge">Movie Review</span>
-      <h1>Avatar: The Way of Water</h1>
-
-      <div class="meta">
-        ⭐ 4.5/5 • ⏱ 192 min • 📅 2022 • 🎬 James Cameron
-      </div>
-
-      <p class="summary">
-        James Cameron returns with a visually breathtaking sequel that expands
-        Pandora’s world through emotional storytelling and spectacular
-        underwater visuals.
-      </p>
-
-      <a href="javascript:void(0)"
-   class="btn-primary"
-   data-trailer="https://www.youtube.com/embed/o5F8MOz_IDw?si=p7I-8TYymNGECOue">
-▶ Watch Trailer
-      </a>
-    </div>
-
-  </div>
+  <img src="images/avatar-2.webp" alt="Avatar The Way of Water">
 </section>
 
-<!-- STORY -->
-<section class="movie-content">
-  <div class="container">
-    <h2>Story & Review</h2>
-    <p>
-      Avatar: The Way of Water follows Jake Sully and Neytiri as they protect
-      their family and culture from new threats. The film explores themes of
-      survival, family, and belonging, while setting a new benchmark in
-      cinematic visuals.
-    </p>
+<!-- ================= MOVIE DETAILS ================= -->
+<section class="movie-details container">
+
+  <span class="badge">Movie Review</span>
+
+  <h1>Avatar: The Way of Water</h1>
+
+  <div class="movie-meta">
+    ⭐ 4.5/5 &nbsp; ⏱ 192 min &nbsp; 📅 2022 &nbsp; 🎬 James Cameron
   </div>
+
+  <p class="movie-desc">
+    James Cameron returns with a visually stunning sequel that expands
+    Pandora’s world through emotional storytelling and breathtaking
+    underwater visuals.
+  </p>
+
+  <button class="btn-primary"
+    data-trailer="https://www.youtube.com/embed/o5F8MOz_IDw?si=p7I-8TYymNGECOue">
+    ▶ Watch Trailer
+  </button>
+
 </section>
 
+<!-- ================= STORY ================= -->
+<section class="movie-story container">
+  <h2>Story & Review</h2>
+  <p>
+    Avatar: The Way of Water follows Jake Sully and Neytiri as they protect
+    their family and culture from new threats. The film explores themes
+    of survival, family, and belonging while setting new benchmarks in
+    visual storytelling.
+  </p>
+</section>
+
+<!-- ================= FOOTER ================= -->
 <footer class="footer">
   © 2026 Movie Reviews. All rights reserved.
 </footer>
 
-<script src="theme.js"></script>
-  <!-- TRAILER POPUP -->
+<!-- ================= TRAILER POPUP ================= -->
 <div class="trailer-overlay">
   <div class="trailer-box">
     <button class="trailer-close">✕</button>
@@ -88,5 +86,7 @@
       allowfullscreen>
     </iframe>
   </div>
+</div>
+
 </body>
 </html>
